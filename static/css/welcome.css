@@ -94,16 +94,27 @@ body {
 }
 
 .stripe{
-    background-color: green;
+    
     height: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url("http://habitat-nola.org/wp-content/uploads/2015/04/welcome-home-2-3.png");
     background-position-x: 20px ;
     background-size: 300px 300px;
     background-repeat: no-repeat;
+}
+
+.stripe1{
+    background-image: url("http://habitat-nola.org/wp-content/uploads/2015/04/welcome-home-2-3.png");
+    background-position: center;
+    background-size: contain;
+    border: 1px solid green;
+
+}
+.stripe2{
+    
+      border: 1px solid red;
 }
 
 .box_header_container{
