@@ -21,7 +21,6 @@ class DB:
 
     def create_tables(self, sql):
         """ create a table from the create_table_sql statement
-        :param conn: Connection object
         :param create_table_sql: a CREATE TABLE statement
         :return:
         """
@@ -38,8 +37,8 @@ class DB:
         conn = self.conn
 
         sql_create_tables = """
-        CREATE TABLE `users` (
-          `user_id` int PRIMARY KEY,
+        CREATE TABLE IF NOT EXISTS `users` (
+          `user_id` INTEGER PRIMARY KEY AUTOINCREMENT,
           `username` varchar(255),
           `first_name` varchar(255),
           `last_name` varchar(255),
@@ -49,7 +48,7 @@ class DB:
           `origin_country` varchar(255)
         );
         
-        CREATE TABLE `shared_activities` (
+        CREATE TABLE IF NOT EXISTS `shared_activities` (
           `creator_id` int,
           `activity_id` int PRIMARY KEY,
           `name` varchar(255),
@@ -59,7 +58,7 @@ class DB:
           `description` varchar(255)
         );
         
-        CREATE TABLE `social_meals` (
+        CREATE TABLE IF NOT EXISTS `social_meals` (
           `meal_id` int PRIMARY KEY,
           `creator_id` int,
           `event_date` datetime,
@@ -67,7 +66,7 @@ class DB:
           `meal_preference` varchar(255)
         );
         
-        CREATE TABLE `social_information` (
+        CREATE TABLE IF NOT EXISTS `social_information` (
           `category` varchar(255),
           `website_id` int PRIMARY KEY,
           `website` varchar(255),
@@ -75,7 +74,7 @@ class DB:
           `source_id` int
         );
         
-        CREATE TABLE `services` (
+        CREATE TABLE IF NOT EXISTS `services` (
           `service_id` int PRIMARY KEY,
           `service_name` varchar(255),
           `service` varchar(255) UNIQUE,
@@ -95,8 +94,12 @@ class DB:
         else:
             print("Error! cannot create the database connection.")
 
-    def form_to_db(self, table, columns, data):
-        sql = f"INSERT INTO {table} (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-        data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
+    def signup_to_db(self, data):
+        """ add user name to users table in database """
+
+        sql = """INSERT INTO users 
+        (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) 
+        VALUES (?, ?, ?, ?, ?, ?, ?) """
+        # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
         self.conn.execute(sql, data)
         self.conn.commit()

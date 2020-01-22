@@ -15,15 +15,11 @@ def hello():
     return "Hello"
 
 
-@app.route("/signup", methods=['POST'])
+@app.route("/signup", methods=['GET'])
 def sign_up():
-    db.form_to_db("users", None, None)
-    # if requests.method == 'POST':
-    #     first_name = requests.form['first_name']
-    #     try:
-    #         db.form_to_db("users", None, None)
-    #     except Exception as e:
-    #         print(e)
+    data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
+    db = DB(DB_FILE)
+    db.signup_to_db(data)
     return render_template("signup.html")
 
 
