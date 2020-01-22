@@ -1,0 +1,17 @@
+.form-container{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form_item{
+    justify-content: space-evenly;
+    margin-top: 0.5vh;
+
+}
+
+.form_item h3{
+    margin:0;
+}
+
