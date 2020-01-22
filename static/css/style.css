@@ -58,6 +58,14 @@ body {
   border: 1px solid black;
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
 
 .stripe {
   display: flex;
