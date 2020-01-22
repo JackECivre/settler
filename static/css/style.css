@@ -58,6 +58,14 @@ body {
   border: 1px solid black;
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
 
 .stripe {
   display: flex;
@@ -70,3 +78,20 @@ body {
   border: 1px solid;
 }
 
+.sign_box{
+
+}
+
+.sign{
+    padding:1px 45px 1px 45px;
+    margin: 5px;
+    font-size: xx-large;
+    color: white;
+    background-color: lightblue;
+    stroke: 1px solid black;
+    border-radius: 10px;
+}
+
+.sign h3{
+    margin: 0;
+}

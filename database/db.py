@@ -95,15 +95,15 @@ class DB:
         else:
             print("Error! cannot create the database connection.")
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
     # def host_to_db(self):
     #     sql =  "INSERT INTO table_name (columnName,columnName,columnName,columnName) VALUES (%s, %s, %s, %s)")
     #     # c.execute(sql, (guest_vnaam, guest_anaam, guest_cnaam, guest_datum))
     #     return
-=======
+# =======
     def form_to_db(self, table, columns, data):
         sql = f"INSERT INTO {table} (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
         self.conn.execute(sql, data)
         self.conn.commit()
->>>>>>> c025357c52e80128caa5a86226143b302075a455
+# >>>>>>> c025357c52e80128caa5a86226143b302075a455
