@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import threading
 import time
 import requests
@@ -8,7 +8,52 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template("index.html")
+
+
+@app.route("/signup", methods=['GET'])
+def sign_up():
+    return render_template("signup.html")
+
+
+@app.route("/welcome", methods=['GET'])
+def welcome():
+    return render_template("welcome.html")
+
+
+@app.route("/map", methods=['GET'])
+def map():
+    return render_template("maps.html")
+
+
+@app.route("/prices", methods=['GET'])
+def prices():
+    return render_template("prices.html")
+
+
+@app.route("/apps", methods=['GET'])
+def apps():
+    return render_template("apps.html")
+
+
+@app.route("/meal", methods=['GET'])
+def meal():
+    return render_template("meal.html")
+
+
+@app.route("/meal/createmeal", methods=['GET'])
+def host():
+    return render_template("createmeal.html")
+
+
+@app.route("/meal/hosted", methods=['GET'])
+def hosted():
+    return render_template("hosted.html")
+
+
+@app.route("/meal/hosted/listing", methods=['GET'])
+def hosted():
+    return render_template("listing.html")
 
 
 if __name__ == "__main__":
