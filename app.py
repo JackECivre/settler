@@ -105,12 +105,31 @@ def host():
 
 @app.route("/meal/host", methods=['POST'])
 def create_meal():
-    return render_template("listings.html")
+    def meal_tags():
+        meal_type = []
+        for key, val in request.form.items():
+            if key.startswith('type'):
+                meal_type.append(val)
+        return meal_type
+    listing = {
+        "first_name": request.form['first_name'],
+        "last_name": request.form['last_name'],
+        "date_of_birth": request.form['bday'],
+        "origin_country": request.form['country_of_origin'],
+        "address": request.form['address'],
+        "current_city": request.form['city_of_residence'],
+        "number_of_guests": request.form['number_of_guests'],
+        "meal type": meal_tags(),
+        "meal_date": request.form['meal_date'],
+        "meal_time": request.form['meal_time']
+    }
+    return render_template("listings.html", listing=listing)
 
 
 @app.route("/meal/listings", methods=['GET'])
 def view_meals():
     return render_template("listings.html")
+
 
 @app.route("/meal/hosted/listing", methods=['GET'])
 def listing():

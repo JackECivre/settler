@@ -41,12 +41,11 @@ a {
 }
 
 .nav-list {
-  display: flex;
+  top: 1px;
+    display: flex;
   width: 60vw;
   justify-content: space-between;
 }
-
-
 
 .language_selector {
   display: flex;

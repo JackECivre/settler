@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/meal.css">
     <title>Meal</title>
 </head>
+
 <body>
-<div class="button_container">
-    <button onclick="window.location.href = '/meal/createmeal';"> Host </button>
-    <button onclick="window.location.href = '/meal/listings';">Be Hosted</button>
-</div>
+
+    <div class="container">
+        <nav>
+
+        </nav>
+        <div class="button_container">
+            <div class="host_button">
+                <button onclick="window.location.href = '/meal/createmeal';">
+                    <h1 class="button_name">
+                        Host
+                    </h1>
+                </button>
+            </div>
+            <div class="host_button">
+                <button onclick="window.location.href = '/meal/listings';">
+                    <h1 class="button_name">
+                        Be Hosted
+                    </h1>
+                </button>
+            </div>
+        </div>
+    </div>
+    
 </body>
+
 </html>

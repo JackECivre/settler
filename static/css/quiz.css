@@ -1,0 +1,20 @@
+.quiz_container {
+  height: 85vh;
+  width: 95vw;
+}
+
+.quiz button {
+  display: absolute;
+  width: 95vw;
+  height: 20vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-top: 1vh;
+  padding: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.quiz_name {
+  font-size: 3.5rem;
+}
