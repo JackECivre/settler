@@ -85,9 +85,30 @@ class DB:
           `source` varchar(255),
           `source_id` int
         );
+          
+        CREATE TABLE IF NOT EXISTS `services` (
+          `service_id` int PRIMARY KEY,
+          `service_name` varchar(255),
+          `service` varchar(255) UNIQUE,
+          `address` varchar(255),
+          `opening_hour` datetime,
+          `closing_hour` datetime,
+          `source` varchar(255),
+          `source_id` int
+        );
         
-
-             
+        CREATE TABLE `questions` (
+          `question_id` int PRIMARY KEY,
+          `category` varchar(255),
+          `answer_type` varchar(255)
+        );
+        
+        CREATE TABLE `answer` (
+          `answer_id` int PRIMARY KEY,
+          `user_id` int,
+          `question_id` int,
+          `answer` varchar(255)
+        );
         """
         # create tables
         if conn is not None:
@@ -104,6 +125,15 @@ class DB:
         # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
         self.conn.execute(sql, data)
         self.conn.commit()
+
+    def read_listing(self):
+        """ read_listing from the database """
+        cur = self.conn.cursor()
+        sql = """SELECT * from users """
+        cur.execute(sql)
+        rows = cur.fetchall()
+        return rows
+
 
     def read_listing(self):
         """ read_listing from the database """
