@@ -1,11 +1,12 @@
-.quiz_container {
+
+.button_container {
   height: 85vh;
   width: 95vw;
 }
 
-.quiz button {
+.host_button button{
   display: absolute;
-  width: 95vw;
+  width: 90vw;
   height: 20vh;
   margin-right: 2vw;
   margin-left: 2vw;
@@ -15,6 +16,8 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.quiz_name {
+.button_name {
   font-size: 3.5rem;
 }
+
+

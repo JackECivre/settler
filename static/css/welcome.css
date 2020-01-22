@@ -1,30 +1,29 @@
 body {
-    background: linear-gradient(
-        180deg,
-        #ffffff 43.23%,
-        rgba(88, 233, 233, 0.734375) 100%
-      );
+  background: linear-gradient(
+    180deg,
+    #ffffff 43.23%,
+    rgba(88, 233, 233, 0.734375) 100%
+  );
 }
 
 .logo_img {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
-.nav-list{
-    display: flex;
-    justify-content: center;
-     
+.nav-list {
+  display: flex;
+  justify-content: center;
 }
 
-.nav-links{
-    margin: 8px;
+.nav-links {
+  margin: 8px;
 }
 
-.landing_message{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.landing_message {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 
@@ -33,60 +32,92 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-
-
 }
 
 .split_box{
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
+    justify-content:center; 
    
 }
 .small-container{
     border: 1px solid green;
-    width: 300px;
+    width: 500px;
+    height: 400px;
     margin: 5px;
-}
-
-.container1{
-    background-image: url("https://www.androidguys.com/wp-content/uploads/2017/12/Where-are-you.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container1{
+    background-image: url("https://www.androidguys.com/wp-content/uploads/2017/12/Where-are-you.jpg");  
 }
 .container2{
     background-image: url("https://www.groovehq.com/blog/wp-content/uploads/2019/10/Feature-image-Lowering-prices@2x-790x490.png");
-    background-size: cover;
-    background-position: center;
+    
 }
 .container3{
     background-image: url("https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BZEMCNHX3UZQXPOKUSHJS22HKU.JPG&w=767");
-    background-size: cover;
-    background-position: center;
+    
 }
 .container4{
     background-image: url("https://i2.wp.com/www.mobileworldlive.com/wp-content/uploads/2019/05/social-media-apps-2-shutterstock-650-e1576686057538.jpg?fit=650%2C399&ssl=1");
-    background-size: cover;
-    background-position: center;
+    
 }
 .container5{
-    background-image: url("https://images.readwrite.com/wp-content/uploads/2019/08/Why-You-Love-Online-Quizzes-825x500.jpg");
-    background-size: cover;
+    background-image: url("https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg?size=626&ext=jpg");
+    background-size: 500px 400px;
+    background-repeat: no-repeat;
     background-position: center;
+  
+  
+ 
 }
 .container6{
-    background-image: url("http://www.bookperhead.com/wp-content/uploads/2017/11/pay-per-head-information.jpg");
-    background-size: contain;
-    background-position: center;
+    background-image: url("http://www.aljanh.net/data/archive/img/2404489385.png");
+    background-size: contain; 
+    background-repeat:no-repeat;
+
 }
 .container7{
     background-image: url("https://www-file.huawei.com/-/media/corporate/images/magazine/winwin/se5/07-03.jpg");
-    background-size: cover;
-    background-position: center;
+    
 }
 
 .container8{
     background-image: url("https://img.pngio.com/benefits-of-after-school-activities-for-children-kids-doing-an-art-activity-png-300_300.png");
-    background-size: cover;
-    background-position: center;
+    
 }
+
+.stripe{
+    background-color: green;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("http://habitat-nola.org/wp-content/uploads/2015/04/welcome-home-2-3.png");
+    background-position-x: 20px ;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
+
+.box_header_container{
+    height:50px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+}
+
+.box_header{
+    text-align: center;
+    color: black;
+}
+
