@@ -10,24 +10,16 @@
 
 <body>
     <div class="container">
+        <div class="header">
         <nav class="nav-header">
-            <div class="header">
-                <div class="small_logo">
+                <div class="logo">
                     <img class="logo_img" src="../static/images/Setteler Logo.png" alt="settler logo">
                 </div>
             </div>
-            <div class="nav-list ">
-                <a class="nav-links" href="https://www.apple.com/mac/" target="_blank">Home</a>
-                <a class="nav-links" href="https://www.apple.com/ipad/" target="_blank">About</a>
-                <a class="nav-links" href="https://www.apple.com/iphone/" target="_blank">Forum</a>
-                <a class="nav-links" href="https://www.apple.com/watch/" target="_blank">FAQ</a>
-                <a class="nav-links" href="https://www.apple.com/tv/" target="_blank">Contact</a>
-            </div>
-
         </nav>
         <div class="form-container">
             <form action="{{url_for('create_user')}}" method="post">
-                
+
                 <div class="form_box">
                     <div class="form_item">
                         <h3>Username:</h3>
@@ -46,7 +38,7 @@
                         <input type="date" name="bday"><br><br>
                     </div>
                 </div>
-                
+
                 <hr>
 
                 <div class="form_box">
