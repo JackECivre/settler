@@ -52,7 +52,7 @@ class DB:
         else:
             print("Error! cannot create the database connection.")
 
-    def host_to_db(self):
-        sql =  "INSERT INTO table_name (columnName,columnName,columnName,columnName) VALUES (%s, %s, %s, %s)")
-        # c.execute(sql, (guest_vnaam, guest_anaam, guest_cnaam, guest_datum))
-        return
+    # def host_to_db(self):
+    #     sql =  "INSERT INTO table_name (columnName,columnName,columnName,columnName) VALUES (%s, %s, %s, %s)")
+    #     # c.execute(sql, (guest_vnaam, guest_anaam, guest_cnaam, guest_datum))
+    #     return
