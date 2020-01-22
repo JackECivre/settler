@@ -7,6 +7,8 @@
 <body>
     <div class="form-container">
         <form>
+        <label>Username</label>:</label>
+        <input type="text" name="username" /><br>
           <label>First Name:</label>
           <input type="text" name="first_name" /><br>
           <label>Last Name:</label>
@@ -21,30 +23,23 @@
           <input type="text" name="address" /><br>
           <label>Maximum Number of Guests:</label>
           <input type="number" name="number_of_guests" min="1" max="10" /><br>
-          <label>Meal Type</label> 
-    <select multiple name="food_preference">
-            <option  value="fish">Fish</option >
-            <option  value="meat">Meat</option >
-            <option  value="milk">Milk</option >
-            <option  value="indian">Indian</option >
-            <option  value="kosher">Kosher</option >
-            <option  value="chinese">Chinese</option >
-            <option  value="italian">Italian</option >
-            <option  value="israeli">Israeli</option >
-            <option  value="kosher">Kosher</option >
-            <option  value="vegan">Vegan</option >
-            <option  value="vegetarian">Vegetarian</option >
-        </select>
-        <h6>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</h6>
+          <label>Date of Birth</label>
+          <input type="date" name="bday"><br><br>
+        
+          <label>Interests</label>
+          <select multiple name="interests">
+            <option  value="sports">Sports</option >
+            <option  value="politics">Politics</option >
+            <option  value="art">Art</option >
+            <option  value="movies">Movies</option >
+            <option  value="food">Food</option >
+            <option  value="music">Music</option >
+            <option  value="religion">Religon</option >
+            <option  value="travel">Travel</option >
 
-         <label>Food Allergies:</label>
-          <input type="radio" name="allergies" value="no" />No
-          <input type="radio" name="allergies" value="yes" />Yes
-          <input type="text" name="allergies" /><br>
-          <label>Meal Date</label>
-          <input type="date" name="meal_date"><br>
-          <label>Meal Time</label>
-          <input type="time" name="meal_time">
+        </select>
+
+
         </form>
       </div>
 </body>
