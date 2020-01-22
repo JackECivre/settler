@@ -101,22 +101,22 @@ class DB:
         sql = """INSERT INTO users 
         (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) 
         VALUES (?, ?, ?, ?, ?, ?, ?) """
-        # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
         self.conn.execute(sql, data)
         self.conn.commit()
 
-    def read_listing(self):
+    def read_table(self, table_name, columns="*"):
         """ read_listing from the database """
         cur = self.conn.cursor()
-        sql = """SELECT * from users """
+        sql = f"SELECT {columns} from {table_name}"
         cur.execute(sql)
         rows = cur.fetchall()
         return rows
 
-# if __name__ == "__main__":
-    # DB_FILE = "./settler.db"
-    # db = DB(DB_FILE)
-    # rows = db.read_listing()
-    # host = defaultdict(list)
-    # for r in rows:
-    #     host["first_name"].append(r[1])
+if __name__ == "__main__":
+    DB_FILE = "./settler.db"
+    db = DB(DB_FILE)
+    rows = db.read_table("shared_activities")
+    host = defaultdict(list)
+    for r in rows:
+        host["first_name"].append(r[1])
+    x=1
