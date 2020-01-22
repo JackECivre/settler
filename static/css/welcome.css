@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(
+        180deg,
+        #ffffff 43.23%,
+        rgba(88, 233, 233, 0.734375) 100%
+      );
+}
+
+.logo_img {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+     
+}
+
+.nav-links{
+    margin: 8px;
+}
+
+.landing_message{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.split_box{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.small-container{
+    border: 1px solid green;
+}
