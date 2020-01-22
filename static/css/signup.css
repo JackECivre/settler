@@ -1,0 +1,34 @@
+.container{
+    justify-content: flex-start;
+}
+
+.form-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form_item {
+  justify-content: space-evenly;
+  margin-top: 2vh;
+}
+
+.form_item h3 {
+  margin: 0;
+}
+
+.form_box{
+    padding-top: 5vh;
+}
+
+input {
+  width: 50vw;
+  padding: 1px 0px;
+  border: solid lightgray;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 4px;
+  border-left-width: 0px;
+  background: none;
+}

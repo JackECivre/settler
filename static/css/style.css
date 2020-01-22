@@ -8,10 +8,15 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: 900;
+}
+
 .container {
   display: flex;
-  flex-direction: column;
-  position: absolute;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -22,9 +27,26 @@ body {
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1px;
+}
+
+.nav-header {
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-evenly;
   align-items: center;
 }
+
+.nav-list {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+}
+
+
 
 .language_selector {
   display: flex;
@@ -40,13 +62,17 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.small_logo {
+  display: flex;
+  width: 20vw;
+}
 
 .logo_img {
   display: block;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 85%;
   justify-content: start;
 }
 
@@ -58,13 +84,13 @@ body {
   border: 1px solid black;
 }
 
-footer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1px;
-    width: 90vw;
-    justify-content: center;
-    align-items: center;
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .stripe {
@@ -73,25 +99,25 @@ footer{
   padding: 2%;
 }
 
-.stripe > table{
+.stripe > table {
   text-align: center;
   border: 1px solid;
 }
 
-.sign_box{
-
+.sign {
+  padding: 1px 55px 1px 55px;
+  margin: 10px;
+  font-size: xx-large;
+  color: white ;
+  background-color: rgb(16, 99, 207);
+  stroke: 1px solid black;
+  border-radius: 10px;
+}
+.sign a{
+    color: white
 }
 
-.sign{
-    padding:1px 45px 1px 45px;
-    margin: 5px;
-    font-size: xx-large;
-    color: white;
-    background-color: lightblue;
-    stroke: 1px solid black;
-    border-radius: 10px;
+.sign h3 {
+  margin: 0;
 }
 
-.sign h3{
-    margin: 0;
-}
