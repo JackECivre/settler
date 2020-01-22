@@ -114,10 +114,10 @@ def create_meal():
     listing = {
         "first_name": request.form['first_name'],
         "last_name": request.form['last_name'],
-        "age": request.form['bday'],
+        "date_of_birth": request.form['bday'],
         "origin_country": request.form['country_of_origin'],
         "address": request.form['address'],
-        "city": request.form['city_of_residence'],
+        "current_city": request.form['city_of_residence'],
         "number_of_guests": request.form['number_of_guests'],
         "meal type": meal_tags(),
         "meal_date": request.form['meal_date'],
