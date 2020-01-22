@@ -27,7 +27,8 @@
         </nav>
         <div class="form-container">
             <form action="{{url_for('create_user')}}" method="post">
-                <div class="personal">
+                
+                <div class="form_box">
                     <div class="form_item">
                         <h3>Username:</h3>
                         <input type="text" name="username" />
@@ -45,10 +46,17 @@
                         <input type="date" name="bday">
                     </div>
                 </div>
-                <div class="location">
+                
+                <hr>
+
+                <div class="form_box">
                     <div class="form_item">
                         <h3>Country of Origin:</h3>
+<<<<<<< HEAD
                         <input type="text" name="country_of_origin" />
+=======
+                        <input type="text" name="country_of_origin" /></br>
+>>>>>>> f5443c4b64c65f291a0656070cc4a9f37307ac25
                     </div>
                     <div class="form_item">
                         <h3>City of Residence:</h3>
@@ -59,7 +67,7 @@
                         <input type="text" name="address" />
                     </div>
                 </div>
-                <div class="interests">
+                <!-- <div class="form_box">
                     <div class="form_item">
                         <h3>Interests</h3>
                         <select multiple name="interests[]">
@@ -73,7 +81,7 @@
                             <option value="travel" name="travel">Travel</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
 
             </form>
         </div>
