@@ -77,3 +77,20 @@ footer{
   text-align: center;
 }
 
+.sign_box{
+
+}
+
+.sign{
+    padding:1px 45px 1px 45px;
+    margin: 5px;
+    font-size: xx-large;
+    color: white;
+    background-color: lightblue;
+    stroke: 1px solid black;
+    border-radius: 10px;
+}
+
+.sign h3{
+    margin: 0;
+}
