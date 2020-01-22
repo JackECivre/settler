@@ -7,39 +7,68 @@
 <body>
     <div class="form-container">
         <form>
+          <label>First Name:</label>
+          <input type="text" name="first_name" /><br>
+          <label>Last Name:</label>
+          <input type="text" name="last_name" /><br>
+          <label>Age:</label>
+          <input type="number" name="age" min="1" max="100" /><br>
+          <label>Country of Origin:</label>
+          <input type="text" name="country_of_origin" /><br>
+          <label>City of Residence:</label>
+          <input type="text" name="city_of_residence" /><br>
           <label>Address:</label>
           <input type="text" name="address" /><br>
           <label>Maximum Number of Guests:</label>
           <input type="number" name="number_of_guests" min="1" max="10" /><br>
-          <label>Meal Preference</label> <br>
-    <select multiple name="food_preference">
-            <option  value="fish">Fish</option >
-            <option  value="meat">Meat</option >
-            <option  value="milk">Milk</option >
-            <option  value="indian">Indian</option >
-            <option  value="chinese">Chinese</option >
-            <option  value="italian">Italian</option >
-            <option  value="israeli">Israeli</option >
-            <option  value="kosher">Kosher</option >
-            <option  value="vegan">Vegan</option >
-              <option  value="vegan">Pork</option >
-            <option  value="vegetarian">Vegetarian</option >
+<<<<<<< HEAD
+          <label>Meal Type</label> <br>
+    <select multiple name="meal_type">
+            <option  value="fish" name="fish">Fish</option >
+            <option  value="meat" name="meat">Meat</option >
+            <option  value="milk" name="milk">Milk</option >
+            <option  value="indian" name="indian">Indian</option >
+            <option  value="chinese" name="chinese">Chinese</option >
+            <option  value="italian" name="italian">Italian</option >
+            <option  value="israeli" name="israeli">Israeli</option >
+            <option  value="kosher" name="kosher">Kosher</option >
+            <option  value="vegan" name="vegan">Vegan</option >
+            <option  value="pork" name="pork">Pork</option >
+
         </select><br><br>
         <label>Food Restrictions</label> <br>
         <input type="checkbox"  value="vegan">Vegan</input type="checkbox" ><br>
           <input type="checkbox"  value="vegetarian">Vegetarian</input type="checkbox" ><br>
           <input type="checkbox"  value="kosher">Kosher</input type="checkbox" ><br>
-            <input type="checkbox"  value="gluten-free">Gluten-Free</input type="checkbox" ><br>
-              <input type="checkbox"  value="hallal">Hallal</input type="checkbox" ><br>
-                <input type="checkbox"  value="nut">Nut Allergy</input type="checkbox" ><br>
-                  <input type="checkbox"  value="pork">Pork</input type="checkbox" ><br><br>
+          <input type="checkbox"  value="gluten-free">Gluten-Free</input type="checkbox" ><br>
+          <input type="checkbox"  value="hallal">Hallal</input type="checkbox" ><br>
+          <input type="checkbox"  value="nut">Nut Allergy</input type="checkbox" ><br>
+          <input type="checkbox"  value="pork">Pork</input type="checkbox" ><br><br>
          
       </select>
+
+=======
+          <label>Meal Type</label> 
+    <select multiple name="food_preference[]">
+            <option name="preference"  value="fish">Fish</option >
+            <option name="preference"  value="meat">Meat</option >
+            <option name="preference" value="milk">Milk</option >
+            <option name="preference" value="indian">Indian</option >
+            <option name="preference"value="kosher">Kosher</option >
+            <option name="preference" value="chinese">Chinese</option >
+            <option name="preference"  value="italian">Italian</option >
+            <option name="preference"  value="israeli">Israeli</option >
+            <option name="preference"  value="kosher">Kosher</option >
+            <option name="preference"  value="vegan">Vegan</option >
+            <option name="preference"  value="vegetarian">Vegetarian</option >
+        </select>
+        <h6>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</h6>
 
          <label>Food Allergies:</label>
           <input type="radio" name="allergies" value="no" />No
           <input type="radio" name="allergies" value="yes" />Yes
-          <input type="text" name="allergies" value="please elaborate..."/><br>
+          <input type="text" name="allergies" /><br>
+>>>>>>> f5443c4b64c65f291a0656070cc4a9f37307ac25
           <label>Meal Date</label>
           <input type="date" name="meal_date"><br>
           <label>Meal Time</label>
