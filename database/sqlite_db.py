@@ -60,7 +60,7 @@ class DB:
         );
         
         CREATE TABLE IF NOT EXISTS `social_meals` (
-          `meal_id` int PRIMARY KEY,
+          `meal_id` INTEGER PRIMARY KEY AUTOINCREMENT,
           `creator_id` int,
           `event_date` datetime,
           `max_people` int,
@@ -122,7 +122,15 @@ class DB:
         sql = """INSERT INTO users 
         (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) 
         VALUES (?, ?, ?, ?, ?, ?, ?) """
-        # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
+        self.conn.execute(sql, data)
+        self.conn.commit()
+
+    def host_meal_to_db(self, data):
+        """ add meal to social_meals table in database """
+
+        sql = """INSERT INTO social_meals 
+        (creator_id, event_date, max_people,  date_of_birth, meal_preference) 
+        VALUES (?, ?, ?, ?) """
         self.conn.execute(sql, data)
         self.conn.commit()
 
@@ -133,6 +141,7 @@ class DB:
         cur.execute(sql)
         rows = cur.fetchall()
         return rows
+
 
 if __name__ == "__main__":
     DB_FILE = "./settler.db"
