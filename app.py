@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import threading
 import time
 import requests
@@ -10,6 +10,8 @@ DB_FILE = "./database/settler.db"
 db = DB(DB_FILE)
 conn = db.conn
 
+users = []
+
 @app.route("/")
 def hello():
     return "Hello"
@@ -20,9 +22,14 @@ def sign_up():
     return render_template("signup.html")
 
 
-@app.route("/welcome", methods=['GET'])
+@app.route("/welcome", methods=['POST'])
 def welcome():
-    return render_template("welcome.html")
+    user = {
+    "id": users[-1]['id'] + 1,
+    "first_name": request.form['first_name'],
+    "last_name": request.form['last_name']
+    }
+    return render_template("welcome.html", user=user)
 
 
 @app.route("/map", methods=['GET'])
@@ -50,11 +57,8 @@ def host():
     return render_template("createmeal.html")
 
 
-@app.route("/meal/hosted", methods=['POST'])
+@app.route("/meal/hosted", methods=['GET'])
 def hosted():
-    if requests.method == 'POST':
-        first_name = requests.form['first_name']
-        # try:
     return render_template("hosted.html")
 
 
