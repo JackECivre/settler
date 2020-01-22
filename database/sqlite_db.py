@@ -103,3 +103,13 @@ class DB:
         # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
         self.conn.execute(sql, data)
         self.conn.commit()
+
+    def read_listing(self, data):
+        """ read_listing from the database """
+
+        sql = """INSERT INTO users 
+        (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) 
+        VALUES (?, ?, ?, ?, ?, ?, ?) """
+        # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
+        self.conn.execute(sql, data)
+        self.conn.commit()
