@@ -5,6 +5,48 @@
     <title>Host</title>
 </head>
 <body>
+    <div class="form-container">
+        <form>
+          <label>First Name:</label>
+          <input type="text" name="first_name" /><br>
+          <label>Last Name:</label>
+          <input type="text" name="last_name" /><br>
+          <label>Age:</label>
+          <input type="number" name="age" min="1" max="100" /><br>
+          <label>Country of Origin:</label>
+          <input type="text" name="country_of_origin" /><br>
+          <label>City of Residence:</label>
+          <input type="text" name="city_of_residence" /><br>
+          <label>Address:</label>
+          <input type="text" name="address" /><br>
+          <label>Maximum Number of Guests:</label>
+          <input type="number" name="number_of_guests" min="1" max="10" /><br>
+          <label>Meal Type</label> 
+    <select multiple name="food_preference">
+            <option  value="fish">Fish</option >
+            <option  value="meat">Meat</option >
+            <option  value="milk">Milk</option >
+            <option  value="indian">Indian</option >
+            <option  value="kosher">Kosher</option >
+            <option  value="chinese">Chinese</option >
+            <option  value="italian">Italian</option >
+            <option  value="israeli">Israeli</option >
+            <option  value="kosher">Kosher</option >
+            <option  value="vegan">Vegan</option >
+            <option  value="vegetarian">Vegetarian</option >
+        </select>
+        <h6>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</h6>
+
+         <label>Food Allergies:</label>
+          <input type="radio" name="allergies" value="no" />No
+          <input type="radio" name="allergies" value="yes" />Yes
+          <input type="text" name="allergies" /><br>
+          <label>Meal Date</label>
+          <input type="date" name="meal_date"><br>
+          <label>Meal Time</label>
+          <input type="time" name="meal_time">
+        </form>
+      </div>
 
 </body>
 </html>

@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Profile</title>
 </head>
 <body>
+    <div class="form-container">
+        <form>
+        <label>Username</label>:</label>
+        <input type="text" name="username" /><br>
+          <label>First Name:</label>
+          <input type="text" name="first_name" /><br>
+          <label>Last Name:</label>
+          <input type="text" name="last_name" /><br>
+          <label>Age:</label>
+          <input type="number" name="age" min="1" max="100" /><br>
+          <label>Country of Origin:</label>
+          <input type="text" name="country_of_origin" /><br>
+          <label>City of Residence:</label>
+          <input type="text" name="city_of_residence" /><br>
+          <label>Address:</label>
+          <input type="text" name="address" /><br>
+          <label>Maximum Number of Guests:</label>
+          <input type="number" name="number_of_guests" min="1" max="10" /><br>
+          <label>Date of Birth</label>
+          <input type="date" name="bday"><br><br>
+        
+          <label>Interests</label>
+          <select multiple name="interests">
+            <option  value="sports">Sports</option >
+            <option  value="politics">Politics</option >
+            <option  value="art">Art</option >
+            <option  value="movies">Movies</option >
+            <option  value="food">Food</option >
+            <option  value="music">Music</option >
+            <option  value="religion">Religon</option >
+            <option  value="travel">Travel</option >
 
+        </select>
+
+
+        </form>
+      </div>
 </body>
 </html>
