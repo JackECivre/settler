@@ -8,10 +8,15 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: 900;
+}
+
 .container {
   display: flex;
-  flex-direction: column;
-  position: absolute;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -24,7 +29,24 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 1px;
 }
+
+.nav-header {
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  justify-items: space-evenly;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+}
+
+
 
 .language_selector {
   display: flex;
@@ -39,6 +61,10 @@ body {
 .header {
   display: flex;
   justify-content: space-around;
+}
+.small_logo {
+  display: flex;
+  width: 20vw;
 }
 
 .logo_img {
@@ -58,13 +84,13 @@ body {
   border: 1px solid black;
 }
 
-footer{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1px;
-    width: 90vw;
-    justify-content: center;
-    align-items: center;
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .stripe {
@@ -73,25 +99,21 @@ footer{
   padding: 2%;
 }
 
-.stripe > table{
+.stripe > table {
   text-align: center;
   border: 1px solid;
 }
 
-.sign_box{
-
+.sign {
+  padding: 1px 45px 1px 45px;
+  margin: 5px;
+  font-size: xx-large;
+  color: white;
+  background-color: lightblue;
+  stroke: 1px solid black;
+  border-radius: 10px;
 }
 
-.sign{
-    padding:1px 45px 1px 45px;
-    margin: 5px;
-    font-size: xx-large;
-    color: white;
-    background-color: lightblue;
-    stroke: 1px solid black;
-    border-radius: 10px;
-}
-
-.sign h3{
-    margin: 0;
+.sign h3 {
+  margin: 0;
 }
