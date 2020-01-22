@@ -2,13 +2,17 @@ from flask import Flask, render_template
 import threading
 import time
 import requests
+from database.db import DB
 
 app = Flask(__name__)
 
+DB_FILE = "./database/settler.db"
+db = DB(DB_FILE)
+conn = db.conn
 
 @app.route("/")
 def hello():
-    return render_template("index.html")
+    return "Hello"
 
 
 @app.route("/signup", methods=['GET'])
@@ -46,13 +50,16 @@ def host():
     return render_template("createmeal.html")
 
 
-@app.route("/meal/hosted", methods=['GET'])
+@app.route("/meal/hosted", methods=['POST'])
 def hosted():
+    if requests.method == 'POST':
+        first_name = requests.form['first_name']
+        # try:
     return render_template("hosted.html")
 
 
 @app.route("/meal/hosted/listing", methods=['GET'])
-def hosted():
+def listing():
     return render_template("listing.html")
 
 
@@ -60,7 +67,7 @@ if __name__ == "__main__":
     threading.Thread(target=app.run).start()
 
 response = requests.get('http://127.0.0.1:5000')
-if response.status_code == 200 and response.text == "Hello World!":
+if response.status_code == 200 and response.text == "Hello":
     print('OK')
 else:
     print('Error')
