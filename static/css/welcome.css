@@ -109,7 +109,8 @@ body {
 .stripe1{
     background-image: url("https://i1.wp.com/ips-dc.org/wp-content/uploads/2019/09/immigration.jpg?resize=1080%2C675&ssl=1");
     background-position: center;
-    background-size: contain;
+    background-size: 80% 100%;
+    color: red;
 
 }
 
