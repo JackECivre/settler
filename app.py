@@ -10,7 +10,11 @@ DB_FILE = "./database/settler.db"
 db = DB(DB_FILE)
 conn = db.conn
 
-users = []
+users = [{
+    "id": 1,
+    "first_name": "Eric",
+    "last_name": "Pinhasovich"
+}]
 
 @app.route("/")
 def hello():
@@ -23,12 +27,14 @@ def sign_up():
 
 
 @app.route("/welcome", methods=['POST'])
-def welcome():
+def create_user():
     user = {
     "id": users[-1]['id'] + 1,
     "first_name": request.form['first_name'],
     "last_name": request.form['last_name']
     }
+    users.append(user)
+    print(users)
     return render_template("welcome.html", user=user)
 
 
