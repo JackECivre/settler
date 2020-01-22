@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 from flask import Flask, render_template, request
 import threading
 import time
@@ -29,16 +31,12 @@ def hello():
 
 @app.route("/signup", methods=['GET'])
 def sign_up():
-    data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
-    db = DB(DB_FILE)
-    db.signup_to_db(data)
     return render_template("signup.html")
 
 
 @app.route("/welcome", methods=['POST'])
 def create_user():
     user = {
-    "id": users[-1]['id'] + 1,
     "username": request.form['username'],
     "first_name": request.form['first_name'],
     "last_name": request.form['last_name'],
@@ -47,8 +45,11 @@ def create_user():
     "current_city": request.form['city_of_residence'],
     "origin_country": request.form['country_of_origin']
     }
-    users.append(user)
-    print(users)
+
+    db = DB(DB_FILE)
+    user_data_to_db = list(user.values())
+    db.signup_to_db(user_data_to_db)
+
     return render_template("welcome.html", user=user)
 
 
@@ -111,16 +112,15 @@ def create_meal():
 def view_meals():
     return render_template("listings.html")
 
-
-# @app.route("/meal/hosted/listing", methods=['GET'])
-# def listing():
-#     return render_template("listing.html")
+@app.route("/meal/hosted/listing", methods=['GET'])
+def listing():
+    return render_template("listing.html")
 
 
 if __name__ == "__main__":
     threading.Thread(target=app.run).start()
 
-response = requests.get('http://127.0.0.1:5000')
+response = request.get('http://127.0.0.1:5000')
 if response.status_code == 200 and response.text == "Hello":
     print('OK')
 else:
