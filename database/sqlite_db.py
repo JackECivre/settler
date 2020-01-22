@@ -97,13 +97,13 @@ class DB:
           `source_id` int
         );
         
-        CREATE TABLE `questions` (
+        CREATE TABLE IF NOT EXISTS `questions` (
           `question_id` int PRIMARY KEY,
           `category` varchar(255),
           `answer_type` varchar(255)
         );
         
-        CREATE TABLE `answer` (
+        CREATE TABLE  IF NOT EXISTS `answer` (
           `answer_id` int PRIMARY KEY,
           `user_id` int,
           `question_id` int,
