@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template("index.html")
+    return "Hello"
 
 
 @app.route("/signup", methods=['GET'])
@@ -52,7 +52,7 @@ def hosted():
 
 
 @app.route("/meal/hosted/listing", methods=['GET'])
-def hosted():
+def listing():
     return render_template("listing.html")
 
 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     threading.Thread(target=app.run).start()
 
 response = requests.get('http://127.0.0.1:5000')
-if response.status_code == 200 and response.text == "Hello World!":
+if response.status_code == 200 and response.text == "Hello":
     print('OK')
 else:
     print('Error')
