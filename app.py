@@ -24,6 +24,9 @@ users = [{
 }]
 
 
+
+
+
 @app.route("/")
 def hello():
     return render_template("index.html")
@@ -103,7 +106,7 @@ def host():
     return render_template("host.html")
 
 
-@app.route("/meal/host", methods=['POST'])
+@app.route("/listings", methods=['POST'])
 def create_meal():
     def meal_tags():
         meal_type = []
