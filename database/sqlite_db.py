@@ -1,4 +1,5 @@
 import sqlite3
+from collections import defaultdict
 from sqlite3 import Error
 
 class DB:
@@ -104,12 +105,20 @@ class DB:
         self.conn.execute(sql, data)
         self.conn.commit()
 
-    def read_listing(self, data):
+    def read_listing(self):
         """ read_listing from the database """
+        cur = self.conn.cursor()
+        sql = """SELECT * from users """
+        cur.execute(sql)
+        rows = cur.fetchall()
+        return rows
 
-        sql = """INSERT INTO users 
-        (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) 
-        VALUES (?, ?, ?, ?, ?, ?, ?) """
-        # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
-        self.conn.execute(sql, data)
-        self.conn.commit()
+if __name__ == "__main__":
+    DB_FILE = "./settler.db"
+    db = DB(DB_FILE)
+    rows = db.read_listing()
+    host = defaultdict(list)
+    for r in rows:
+        host["first_name"].append(r[1])
+
+    x=1

@@ -1,7 +1,7 @@
-from flask import Flask, render_template
+from collections import defaultdict
+from flask import Flask, render_template, request
 import threading
 import time
-import requests
 from database.sqlite_db import DB
 
 app = Flask(__name__)
@@ -23,9 +23,6 @@ def hello():
 
 @app.route("/signup", methods=['GET'])
 def sign_up():
-    data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
-    db = DB(DB_FILE)
-    db.signup_to_db(data)
     return render_template("signup.html")
 
 
@@ -33,8 +30,8 @@ def sign_up():
 def create_user():
     user = {
     "id": users[-1]['id'] + 1,
-    "first_name": requests.form['first_name'],
-    "last_name": requests.form['last_name']
+    "first_name": request.form['first_name'],
+    "last_name": request.form['last_name']
     }
     users.append(user)
     print(users)
@@ -104,7 +101,7 @@ def listing():
 if __name__ == "__main__":
     threading.Thread(target=app.run).start()
 
-response = requests.get('http://127.0.0.1:5000')
+response = request.get('http://127.0.0.1:5000')
 if response.status_code == 200 and response.text == "Hello":
     print('OK')
 else:
