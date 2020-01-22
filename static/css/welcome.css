@@ -42,7 +42,7 @@ body {
    
 }
 .small-container{
-    border: 1px solid green;
+    border: 1px solid blue;
     width: 500px;
     height: 400px;
     margin: 5px;
@@ -110,12 +110,7 @@ body {
     background-image: url("https://i1.wp.com/ips-dc.org/wp-content/uploads/2019/09/immigration.jpg?resize=1080%2C675&ssl=1");
     background-position: center;
     background-size: contain;
-    border: 1px solid green;
 
-}
-.stripe2{
-    
-      border: 1px solid red;
 }
 
 .box_header_container{
@@ -125,7 +120,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid green;
+    border: 3px solid blue;
 }
 
 .box_header{
