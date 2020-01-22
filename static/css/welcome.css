@@ -7,13 +7,14 @@ body {
 }
 
 .logo_img {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 .nav-list {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
@@ -41,7 +42,7 @@ body {
    
 }
 .small-container{
-    border: 1px solid green;
+    border: 1px solid blue;
     width: 500px;
     height: 400px;
     margin: 5px;
@@ -94,16 +95,23 @@ body {
 }
 
 .stripe{
-    background-color: green;
+    
     height: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url("http://habitat-nola.org/wp-content/uploads/2015/04/welcome-home-2-3.png");
     background-position-x: 20px ;
     background-size: 300px 300px;
     background-repeat: no-repeat;
+}
+
+.stripe1{
+    background-image: url("https://i1.wp.com/ips-dc.org/wp-content/uploads/2019/09/immigration.jpg?resize=1080%2C675&ssl=1");
+    background-position: center;
+    background-size: 80% 100%;
+    color: red;
+
 }
 
 .box_header_container{
@@ -113,7 +121,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid green;
+    border: 3px solid blue;
 }
 
 .box_header{

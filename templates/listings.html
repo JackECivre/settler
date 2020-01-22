@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Settler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Settler - Listings</title>
 </head>
+
 <body>
 
     <table>
         <tr class="header">
-          <th class="id header">ID</th>
-          <th class="first_name header">First Name</th>
-          <th class="last_name header">Last Name</th>
-          <th class="address header">Address</th>
-          <th class="guest_number header">Available Seats</th>
-          <th class="meal_type header" >Meal Type</th>
-          <th class="food_restriction header">Food Restriction</th>
-          <th class="meal_date header">Meal Date</th>
-          <th class="meal_time header">Meal Time</th>
-          <th class="join_btn header">Join</th>
+            <th class="id header">ID</th>
+            <th class="first_name header">First Name</th>
+            <th class="last_name header">Last Name</th>
+            <th class="address header">Address</th>
+            <th class="guest_number header">Available Seats</th>
+            <th class="meal_type header">Meal Type</th>
+            <th class="food_restriction header">Food Restriction</th>
+            <th class="meal_date header">Meal Date</th>
+            <th class="meal_time header">Meal Time</th>
+            <th class="join_btn header">Join</th>
         </tr>
         <tr class="">
             <td class="id">{{host.id}}</td>
-            <td class="first_name_data" >{{host.first_name}}</td>
+            <td class="first_name_data">{{host.first_name}}</td>
             <td class="last_name_data">{{host.last_name}}</td>
             <td class="adress data">{{host.address}}</td>
-            <td class="guest_number data" >{{host.guest_number}}</td>
+            <td class="guest_number data">{{host.guest_number}}</td>
             <td class="meal_type data">{{host.meal_type}}</td>
             <td class="food_restriction data">{{host.food_restriction}}</td>
             <td class="meal_date data">{{host.meal_date}}</td>
@@ -32,6 +37,7 @@
             <td class="join data"><button>Join</button></td>
 
 
-        </table>
+    </table>
 </body>
+
 </html>
