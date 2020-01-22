@@ -85,17 +85,22 @@ def meal():
 
 @app.route("/meal/createmeal", methods=['GET'])
 def host():
-    return render_template("createmeal.html")
+    return render_template("host.html")
 
 
-@app.route("/meal/hosted", methods=['GET'])
-def hosted():
-    return render_template("hosted.html")
+@app.route("/meal/host", methods=['POST'])
+def create_meal():
+    return render_template("listings.html")
 
 
-@app.route("/meal/hosted/listing", methods=['GET'])
-def listing():
-    return render_template("listing.html")
+@app.route("/meal/listings", methods=['GET'])
+def view_meals():
+    return render_template("listings.html")
+
+
+# @app.route("/meal/hosted/listing", methods=['GET'])
+# def listing():
+#     return render_template("listing.html")
 
 
 if __name__ == "__main__":
