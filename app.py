@@ -1,8 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 import threading
 import time
 import requests
-from database.db import DB
+from database.sqlite_db import DB
 
 app = Flask(__name__)
 
@@ -23,6 +23,9 @@ def hello():
 
 @app.route("/signup", methods=['GET'])
 def sign_up():
+    data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
+    db = DB(DB_FILE)
+    db.signup_to_db(data)
     return render_template("signup.html")
 
 
@@ -30,8 +33,8 @@ def sign_up():
 def create_user():
     user = {
     "id": users[-1]['id'] + 1,
-    "first_name": request.form['first_name'],
-    "last_name": request.form['last_name']
+    "first_name": requests.form['first_name'],
+    "last_name": requests.form['last_name']
     }
     users.append(user)
     print(users)
