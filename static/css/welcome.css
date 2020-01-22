@@ -7,13 +7,14 @@ body {
 }
 
 .logo_img {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 .nav-list {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
@@ -42,11 +43,14 @@ body {
 }
 .small-container{
     border: 1px solid green;
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 400px;
     margin: 5px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -67,8 +71,9 @@ body {
 }
 .container5{
     background-image: url("https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg?size=626&ext=jpg");
-    background-size: 300px 250px;
+    background-size: 500px 400px;
     background-repeat: no-repeat;
+    background-position: center;
   
   
  
@@ -90,5 +95,41 @@ body {
 }
 
 .stripe{
-    background-color: green;
+    
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-position-x: 20px ;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
 }
+
+.stripe1{
+    background-image: url("http://habitat-nola.org/wp-content/uploads/2015/04/welcome-home-2-3.png");
+    background-position: center;
+    background-size: contain;
+    border: 1px solid green;
+
+}
+.stripe2{
+    
+      border: 1px solid red;
+}
+
+.box_header_container{
+    height:50px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+}
+
+.box_header{
+    text-align: center;
+    color: black;
+}
+
