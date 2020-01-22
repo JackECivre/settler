@@ -106,7 +106,7 @@ def host():
     return render_template("host.html")
 
 
-@app.route("/listings", methods=['POST'])
+@app.route("/added", methods=['POST'])
 def create_meal():
     def meal_tags():
         meal_type = []
@@ -137,7 +137,7 @@ def create_meal():
     meal_data = list(listing.values())
     db.host_meal_to_db(meal_data)
 
-    return render_template("listings.html", listing=listing)
+    return render_template("meal.html", listing=listing)
 
 
 @app.route("/meal/listings", methods=['GET'])
