@@ -18,7 +18,7 @@ users = [{
 
 @app.route("/")
 def hello():
-    return "Hello"
+    return render_template("index.html")
 
 
 @app.route("/signup", methods=['GET'])
@@ -41,6 +41,31 @@ def create_user():
 @app.route("/map", methods=['GET'])
 def map():
     return render_template("maps.html")
+
+
+@app.route("/quiz", methods=['GET'])
+def quiz():
+    return render_template("quiz.html")
+
+
+@app.route("/quiz/language", methods=['GET'])
+def quiz_language():
+    return render_template("quizLang.html")
+
+
+@app.route("/quiz/food", methods=['GET'])
+def quiz_food():
+    return render_template("quizFood.html")
+
+
+@app.route("/quiz/pop", methods=['GET'])
+def quiz_pop():
+    return render_template("quizPop.html")
+
+
+@app.route("/quiz/rec", methods=['GET'])
+def quiz_rec():
+    return render_template("quizRec.html")
 
 
 @app.route("/prices", methods=['GET'])
