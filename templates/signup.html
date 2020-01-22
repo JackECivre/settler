@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="form-container">
-        <form>
+        <form action="{{url_for('create_user')}}" method="post">
         <label>Username</label>:</label>
         <input type="text" name="username" /><br>
           <label>First Name:</label>
@@ -25,7 +25,7 @@
           <input type="date" name="bday"><br><br>
         
           <label>Interests</label>
-          <select multiple name="interests">
+          <select multiple name="interests[]">
             <option  value="sports">Sports</option >
             <option  value="politics">Politics</option >
             <option  value="art">Art</option >
@@ -33,9 +33,17 @@
             <option  value="food">Food</option >
             <option  value="music">Music</option >
             <option  value="religion">Religon</option >
+<<<<<<< HEAD
+            <option  value="travel">Travel</option ><br>
+
+        </select>
+        <input type="submit" value="submit">
+=======
             <option  value="travel">Travel</option >
 
         </select>
+            <input type="submit" value="submit">
+>>>>>>> 43234fc259313702e7419b2bb77680fee1647a03
 
 
         </form>
