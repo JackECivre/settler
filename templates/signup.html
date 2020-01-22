@@ -11,12 +11,13 @@
 <body>
     <div class="container">
         <div class="header">
-        <nav class="nav-header">
+            <nav class="nav-header">
                 <div class="logo">
                     <img class="logo_img" src="../static/images/Setteler Logo.png" alt="settler logo">
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
+
         <div class="form-container">
             <form action="{{url_for('create_user')}}" method="post">
 
@@ -55,22 +56,7 @@
                         <input type="text" name="address" />
                     </div>
                 </div>
-                <!-- <div class="form_box">
-                    <div class="form_item">
-                        <h3>Interests</h3>
-                        <select multiple name="interests[]">
-                            <option value="sports" name="sports">Sports</option>
-                            <option value="politics" name="politics">Politics</option>
-                            <option value="art" name='art'>Art</option>
-                            <option value="movies" name="movies">Movies</option>
-                            <option value="food" name="food">Food</option>
-                            <option value="music" name="music">Music</option>
-                            <option value="religion" name="religion">Religion</option>
-                            <option value="travel" name="travel">Travel</option>
-                        </select>
-                    </div>
-                </div> -->
-
+            <input type="submit">Submit<input>
             </form>
         </div>
     </div>

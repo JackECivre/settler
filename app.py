@@ -1,7 +1,7 @@
-from collections import defaultdict
 from flask import Flask, render_template, request
 import threading
 import time
+import requests
 from database.sqlite_db import DB
 
 app = Flask(__name__)
@@ -12,9 +12,15 @@ conn = db.conn
 
 users = [{
     "id": 1,
+    "username": "Pinny",
     "first_name": "Eric",
-    "last_name": "Pinhasovich"
+    "last_name": "Pinhasovich",
+    "date_of_birth": "12/08/1991",
+    "address": "59 Florentin",
+    "current_city": "Tel Aviv",
+    "origin_country": "USA"
 }]
+
 
 @app.route("/")
 def hello():
@@ -23,6 +29,9 @@ def hello():
 
 @app.route("/signup", methods=['GET'])
 def sign_up():
+    data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
+    db = DB(DB_FILE)
+    db.signup_to_db(data)
     return render_template("signup.html")
 
 
@@ -30,8 +39,13 @@ def sign_up():
 def create_user():
     user = {
     "id": users[-1]['id'] + 1,
+    "username": request.form['username'],
     "first_name": request.form['first_name'],
-    "last_name": request.form['last_name']
+    "last_name": request.form['last_name'],
+    "date_of_birth": request.form['bday'],
+    "address": request.form['address'],
+    "current_city": request.form['city_of_residence'],
+    "origin_country": request.form['country_of_origin']
     }
     users.append(user)
     print(users)
@@ -85,13 +99,17 @@ def meal():
 
 @app.route("/meal/createmeal", methods=['GET'])
 def host():
-    return render_template("createmeal.html")
+    return render_template("host.html")
 
 
-@app.route("/meal/hosted", methods=['GET'])
-def hosted():
-    return render_template("hosted.html")
+@app.route("/meal/host", methods=['POST'])
+def create_meal():
+    return render_template("listings.html")
 
+
+@app.route("/meal/listings", methods=['GET'])
+def view_meals():
+    return render_template("listings.html")
 
 @app.route("/meal/hosted/listing", methods=['GET'])
 def listing():
