@@ -23,98 +23,59 @@
                 <a class="nav-links" href="https://www.apple.com/watch/" target="_blank">FAQ</a>
                 <a class="nav-links" href="https://www.apple.com/tv/" target="_blank">Contact</a>
             </div>
-          
+
         </nav>
         <div class="form-container">
             <form action="{{url_for('create_user')}}" method="post">
-                <div class="form_item">
-                    <h3>Username:</h3>
-                    <input type="text" name="username" /><br>
+                <div class="personal">
+                    <div class="form_item">
+                        <h3>Username:</h3>
+                        <input type="text" name="username" /><br>
+                    </div>
+                    <div class="form_item">
+                        <h3>First Name:</h3>
+                        <input type="text" name="first_name" /><br>
+                    </div>
+                    <div class="form_item">
+                        <h3>Last Name:</h3>
+                        <input type="text" name="last_name" /><br>
+                    </div>
+                    <div class="form_item">
+                        <h3>Date of Birth</h3>
+                        <input type="date" name="bday"><br><br>
+                    </div>
                 </div>
-                <div class="form_item">
-                    <h3>First Name:</h3>
-                    <input type="text" name="first_name" /><br>
+                <div class="location">
+                    <div class="form_item">
+                        <h3>Country of Origin:</h3>
+                        <input type="text" name="country_of_origin" /><br>
+                    </div>
+                    <div class="form_item">
+                        <h3>City of Residence:</h3>
+                        <input type="text" name="city_of_residence" /><br>
+                    </div>
+                    <div class="form_item">
+                        <h3>Address:</h3>
+                        <input type="text" name="address" /><br>
+                    </div>
                 </div>
-                <div class="form_item">
-                    <h3>Last Name:</h3>
-                    <input type="text" name="last_name" /><br>
+                <div class="interests">
+                    <div class="form_item">
+                        <h3>Interests</h3>
+                        <select multiple name="interests[]">
+                            <option value="sports">Sports</option>
+                            <option value="politics">Politics</option>
+                            <option value="art">Art</option>
+                            <option value="movies">Movies</option>
+                            <option value="food">Food</option>
+                            <option value="music">Music</option>
+                            <option value="religion">Religion</option>
+                            <option value="travel">Travel</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form_item">
-                    <h3>Age:</h3>
-                    <input type="number" name="age" min="1" max="100" /><br>
-                </div>
-                <div class="form_item">
-                    <h3>Country of Origin:</h3>
-                    <input type="text" name="country_of_origin" /><br>
-                </div>
-                <div class="form_item">
-                    <h3>City of Residence:</h3>
-                    <input type="text" name="city_of_residence" /><br>
-                </div>
-                <div class="form_item">
-                    <h3>Address:</h3>
-                    <input type="text" name="address" /><br>
-                </div>
-                <div class="form_item">
-                    <h3>Date of Birth</h3>
-                    <input type="date" name="bday"><br><br>
-                </div>
-=======
-<body>
-    <div class="form-container">
-        <form action="{{url_for('create_user')}}" method="post">
-        <label>Username</label>:</label>
-        <input type="text" name="username" /><br>
-          <label>First Name:</label>
-          <input type="text" name="first_name" /><br>
-          <label>Last Name:</label>
-          <input type="text" name="last_name" /><br>
-          <label>Age:</label>
-          <input type="number" name="age" min="1" max="100" /><br>
-          <label>Country of Origin:</label>
-          <input type="text" name="country_of_origin" /><br>
-          <label>City of Residence:</label>
-          <input type="text" name="city_of_residence" /><br>
-          <label>Address:</label>
-          <input type="text" name="address" /><br>
-          <label>Date of Birth</label>
-          <input type="date" name="bday"><br><br>
-        
-          <label>Interests</label>
-          <select multiple name="interests[]">
-            <option  value="sports">Sports</option >
-            <option  value="politics">Politics</option >
-            <option  value="art">Art</option >
-            <option  value="movies">Movies</option >
-            <option  value="food">Food</option >
-            <option  value="music">Music</option >
-            <option  value="religion">Religon</option >
-<<<<<<< HEAD
-            <option  value="travel">Travel</option ><br>
-
-        </select>
-        <input type="submit" value="submit">
-=======
-            <option  value="travel">Travel</option >
-
-        </select>
-            <input type="submit" value="submit">
->>>>>>> 43234fc259313702e7419b2bb77680fee1647a03
->>>>>>> a2667228865811ae9405ccae8d6a5612eda2ca23
-
-                <h3>Interests</h3>
-                <select multiple name="interests[]">
-                    <option value="sports">Sports</option>
-                    <option value="politics">Politics</option>
-                    <option value="art">Art</option>
-                    <option value="movies">Movies</option>
-                    <option value="food">Food</option>
-                    <option value="music">Music</option>
-                    <option value="religion">Religon</option>
-                    <option value="travel">Travel</option>
-
-                </select>
                 <input type="submit" value="submit">
+
             </form>
         </div>
     </div>
