@@ -2,9 +2,13 @@ from flask import Flask, render_template
 import threading
 import time
 import requests
+from database.db import DB
 
 app = Flask(__name__)
 
+DB_FILE = "./database/settler.db"
+db = DB(DB_FILE)
+conn = db.conn
 
 @app.route("/")
 def hello():
@@ -46,8 +50,11 @@ def host():
     return render_template("createmeal.html")
 
 
-@app.route("/meal/hosted", methods=['GET'])
+@app.route("/meal/hosted", methods=['POST'])
 def hosted():
+    if requests.method == 'POST':
+        first_name = requests.form['first_name']
+        # try:
     return render_template("hosted.html")
 
 
