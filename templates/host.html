@@ -11,35 +11,31 @@
           <input type="text" name="address" /><br>
           <label>Maximum Number of Guests:</label>
           <input type="number" name="number_of_guests" min="1" max="10" /><br>
-          <label>Meal Preference</label> <br>
-    <select multiple name="food_preference">
-            <option  value="fish">Fish</option >
-            <option  value="meat">Meat</option >
-            <option  value="milk">Milk</option >
-            <option  value="indian">Indian</option >
-            <option  value="chinese">Chinese</option >
-            <option  value="italian">Italian</option >
-            <option  value="israeli">Israeli</option >
-            <option  value="kosher">Kosher</option >
-            <option  value="vegan">Vegan</option >
-              <option  value="vegan">Pork</option >
-            <option  value="vegetarian">Vegetarian</option >
+          <label>Meal Type</label> <br>
+    <select multiple name="meal_type">
+            <option  value="fish" name="fish">Fish</option >
+            <option  value="meat" name="meat">Meat</option >
+            <option  value="milk" name="milk">Milk</option >
+            <option  value="indian" name="indian">Indian</option >
+            <option  value="chinese" name="chinese">Chinese</option >
+            <option  value="italian" name="italian">Italian</option >
+            <option  value="israeli" name="israeli">Israeli</option >
+            <option  value="kosher" name="kosher">Kosher</option >
+            <option  value="vegan" name="vegan">Vegan</option >
+            <option  value="pork" name="pork">Pork</option >
+
         </select><br><br>
         <label>Food Restrictions</label> <br>
         <input type="checkbox"  value="vegan">Vegan</input type="checkbox" ><br>
           <input type="checkbox"  value="vegetarian">Vegetarian</input type="checkbox" ><br>
           <input type="checkbox"  value="kosher">Kosher</input type="checkbox" ><br>
-            <input type="checkbox"  value="gluten-free">Gluten-Free</input type="checkbox" ><br>
-              <input type="checkbox"  value="hallal">Hallal</input type="checkbox" ><br>
-                <input type="checkbox"  value="nut">Nut Allergy</input type="checkbox" ><br>
-                  <input type="checkbox"  value="pork">Pork</input type="checkbox" ><br><br>
+          <input type="checkbox"  value="gluten-free">Gluten-Free</input type="checkbox" ><br>
+          <input type="checkbox"  value="hallal">Hallal</input type="checkbox" ><br>
+          <input type="checkbox"  value="nut">Nut Allergy</input type="checkbox" ><br>
+          <input type="checkbox"  value="pork">Pork</input type="checkbox" ><br><br>
          
       </select>
 
-         <label>Food Allergies:</label>
-          <input type="radio" name="allergies" value="no" />No
-          <input type="radio" name="allergies" value="yes" />Yes
-          <input type="text" name="allergies" value="please elaborate..."/><br>
           <label>Meal Date</label>
           <input type="date" name="meal_date"><br>
           <label>Meal Time</label>
