@@ -67,5 +67,6 @@ body {
 
 .stripe > table{
   text-align: center;
+  border: 1px solid;
 }
 
