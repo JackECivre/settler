@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import threading
 import time
 import requests
@@ -12,9 +12,15 @@ conn = db.conn
 
 users = [{
     "id": 1,
+    "username": "Pinny",
     "first_name": "Eric",
-    "last_name": "Pinhasovich"
+    "last_name": "Pinhasovich",
+    "date_of_birth": "12/08/1991",
+    "address": "59 Florentin",
+    "current_city": "Tel Aviv",
+    "origin_country": "USA"
 }]
+
 
 @app.route("/")
 def hello():
@@ -33,8 +39,13 @@ def sign_up():
 def create_user():
     user = {
     "id": users[-1]['id'] + 1,
-    "first_name": requests.form['first_name'],
-    "last_name": requests.form['last_name']
+    "username": request.form['username'],
+    "first_name": request.form['first_name'],
+    "last_name": request.form['last_name'],
+    "date_of_birth": request.form['bday'],
+    "address": request.form['address'],
+    "current_city": request.form['city_of_residence'],
+    "origin_country": request.form['country_of_origin']
     }
     users.append(user)
     print(users)
