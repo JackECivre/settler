@@ -15,8 +15,15 @@ def hello():
     return "Hello"
 
 
-@app.route("/signup", methods=['GET'])
+@app.route("/signup", methods=['POST'])
 def sign_up():
+    db.form_to_db("users", None, None)
+    # if requests.method == 'POST':
+    #     first_name = requests.form['first_name']
+    #     try:
+    #         db.form_to_db("users", None, None)
+    #     except Exception as e:
+    #         print(e)
     return render_template("signup.html")
 
 
@@ -50,11 +57,8 @@ def host():
     return render_template("createmeal.html")
 
 
-@app.route("/meal/hosted", methods=['POST'])
+@app.route("/meal/hosted", methods=['GET'])
 def hosted():
-    if requests.method == 'POST':
-        first_name = requests.form['first_name']
-        # try:
     return render_template("hosted.html")
 
 
