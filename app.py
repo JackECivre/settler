@@ -140,7 +140,7 @@ def create_meal():
         "origin_country": request.form['country_of_origin'],
         "address": request.form['address'],
         "current_city": request.form['city_of_residence'],
-        "number_of_guests": request.form['number_of_guests'],
+        "max_people": request.form['number_of_guests'],
         "meal_preference": meal_tags(),
         "event_date": request.form['meal_date'],
         "meal_time": request.form['meal_time']
