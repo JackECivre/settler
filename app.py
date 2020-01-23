@@ -61,10 +61,6 @@ def map():
     return render_template("maps.html")
 
 
-@app.route("/translate", methods=['GET'])
-def translate():
-    return render_template("translate.html")
-
 @app.route("/government", methods=['GET'])
 def government():
     return render_template("government_information.html")
@@ -166,7 +162,7 @@ def create_meal():
     meal_data = list(listing.values())
     db.host_meal_to_db(meal_data)
 
-    return render_template("meal.html", listing=listing)
+    return render_template("listings.html", listing=listing)
 
 
 @app.route("/meal/listings", methods=['GET'])
