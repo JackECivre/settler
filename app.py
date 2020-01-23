@@ -61,6 +61,21 @@ def map():
     return render_template("maps.html")
 
 
+@app.route("/about", methods=['GET'])
+def about():
+    return render_template("about.html")
+
+
+@app.route("/faq", methods=['GET'])
+def faq():
+    return render_template("faq.html")
+
+
+@app.route("/contacts", methods=['GET'])
+def contacts():
+    return render_template("contacts.html")
+
+
 @app.route("/quiz", methods=['GET'])
 def quiz():
     return render_template("quiz.html")
