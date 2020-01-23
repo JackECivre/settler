@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/navbar.js"></script>
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/meal.css">
     <title>Meal</title>
@@ -12,28 +14,46 @@
 
 <body>
 
+
     <div class="container">
         <nav>
+            <div class="logo">
+                <img class="logo_img2" src="../static/images/logo.png    " alt="settler logo">
+            </div>
+            <div class="topnav">
+                <a href="#home" class="active">Menu</a>
+                <div id="myLinks">
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
 
         </nav>
-        <div class="button_container">
-            <div class="host_button">
-                <button onclick="window.location.href = '/meal/createmeal';">
-                    <h1 class="button_name">
-                        Host
-                    </h1>
-                </button>
-            </div>
-            <div class="host_button">
-                <button onclick="window.location.href = '/meal/listings';">
-                    <h1 class="button_name">
-                        Be Hosted
-                    </h1>
-                </button>
+        <div class="content">
+
+            <div class="button_container">
+                <div class="host_button">
+                    <button onclick="window.location.href = '/meal/createmeal';">
+                        <h1 class="button_name">
+                            Host
+                        </h1>
+                    </button>
+                </div>
+                <div class="host_button">
+                    <button onclick="window.location.href = '/meal/listings';">
+                        <h1 class="button_name">
+                            Be Hosted
+                        </h1>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>

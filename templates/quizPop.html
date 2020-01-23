@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/navbar.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
     <title>Settler - Quiz</title>
 </head>
 
 <body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img class="logo_img2" src="../static/images/logo.png    " alt="settler logo">
+            </div>
+            <div class="topnav">
+                <a href="#home" class="active">Menu</a>
+                <div id="myLinks">
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
 
-    <div class="fyrebox_quiz" data-gid="6kGWZp5QG" data-oid="YoEP6Zvq3"></div>
-    <script src="https://cdn.fyrebox.com/javascripts/fyrebox.min.js?2" defer="defer" async></script>
+        </nav>
+        <div class="content">
 
+            <div class="fyrebox_quiz" data-gid="6kGWZp5QG" data-oid="YoEP6Zvq3"></div>
+        </div>
+        <script src="https://cdn.fyrebox.com/javascripts/fyrebox.min.js?2" defer="defer" async></script>
+    </div>
 </body>
 
 </html>
