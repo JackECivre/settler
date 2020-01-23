@@ -60,9 +60,12 @@ class DB:
         );
         
         CREATE TABLE IF NOT EXISTS `social_meals` (
-          `meal_id` INTEGER PRIMARY KEY AUTOINCREMENT,
+          `meal_id` int PRIMARY KEY,
           `creator_id` int,
           `event_date` datetime,
+          `event_time` datetime,
+          `event_city` varchar(255),
+          `event_address` varchar(255),
           `max_people` int,
           `meal_preference` varchar(255)
         );
@@ -85,25 +88,14 @@ class DB:
           `source` varchar(255),
           `source_id` int
         );
-          
-        CREATE TABLE IF NOT EXISTS `services` (
-          `service_id` int PRIMARY KEY,
-          `service_name` varchar(255),
-          `service` varchar(255) UNIQUE,
-          `address` varchar(255),
-          `opening_hour` datetime,
-          `closing_hour` datetime,
-          `source` varchar(255),
-          `source_id` int
-        );
-        
+         
         CREATE TABLE IF NOT EXISTS `questions` (
           `question_id` int PRIMARY KEY,
           `category` varchar(255),
           `answer_type` varchar(255)
         );
         
-        CREATE TABLE  IF NOT EXISTS `answer` (
+        CREATE TABLE IF NOT EXISTS `answer` (
           `answer_id` int PRIMARY KEY,
           `user_id` int,
           `question_id` int,
