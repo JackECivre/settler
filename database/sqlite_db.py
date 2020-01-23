@@ -60,7 +60,7 @@ class DB:
         );
         
         CREATE TABLE IF NOT EXISTS `social_meals` (
-          `meal_id` int PRIMARY KEY,
+          `meal_id` INTEGER PRIMARY KEY AUTOINCREMENT,
           `creator_id` int,
           `event_date` datetime,
           `event_time` datetime,
@@ -121,8 +121,8 @@ class DB:
         """ add meal to social_meals table in database """
 
         sql = """INSERT INTO social_meals 
-        (creator_id, event_date, max_people,  date_of_birth, meal_preference) 
-        VALUES (?, ?, ?, ?) """
+        (creator_id, event_date, event_time,  event_city, event_address, max_people, meal_preference) 
+        VALUES (?, ?, ?, ?, ?, ?, ?) """
         self.conn.execute(sql, data)
         self.conn.commit()
 
