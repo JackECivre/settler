@@ -42,15 +42,17 @@ body {
    
 }
 .small-container{
-    border: 1px solid blue;
-    width: 500px;
-    height: 400px;
-    margin: 5px;
+
+    width: 20vw;
+    height: 20vh;
+    margin:1vh;
+    
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 }
 
 
@@ -71,17 +73,13 @@ body {
 }
 .container5{
     background-image: url("https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg?size=626&ext=jpg");
-    background-size: 500px 400px;
-    background-repeat: no-repeat;
-    background-position: center;
-  
+ 
   
  
 }
 .container6{
     background-image: url("http://www.aljanh.net/data/archive/img/2404489385.png");
-    background-size: contain; 
-    background-repeat:no-repeat;
+  
 
 }
 .container7{
@@ -115,13 +113,14 @@ body {
 }
 
 .box_header_container{
-    height:50px;
-    width: 300px;
-    background-color: white;
+    height:5vh;
+    width: 15vw;
+    background-color: lightskyblue;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid blue;
+    overflow: hidden;
+    /* border: 2px solid black; */
 }
 
 .box_header{
