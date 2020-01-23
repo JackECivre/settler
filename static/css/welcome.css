@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> dd26567c6f04c1eb5ef395cd22dd353b7132f349
 
 .logo_img {
-  height: 60px;
-  width: 60px;
+  height: 30px;
+  width: 40px;
 }
 
 .nav-list {
@@ -33,7 +37,7 @@
 }
 .small-container {
   width: 40vw;
-  height: 15vh;
+  height: 34vh;
   margin: 0.5vh;
   background-size: cover;
   background-position: center;
@@ -41,6 +45,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+
 }
 
 .container1 {
@@ -59,7 +64,9 @@
   background-image: url("https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg?size=626&ext=jpg");
 }
 .container6 {
-  background-image: url("http://www.aljanh.net/data/archive/img/2404489385.png");
+  background-image: url("https://www.szmc.org.il/UploadedImages//11_2015/Information_1_16.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .container7 {
   background-image: url("https://www-file.huawei.com/-/media/corporate/images/magazine/winwin/se5/07-03.jpg");
@@ -70,21 +77,28 @@
 }
 
 .stripe {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-position-x: 20px;
-  background-size: 300px 300px;
-  background-repeat: no-repeat;
+    height: 34vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position-x: 20px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: green;
 }
 
+.stripe > h1 {
+    color: black;
+    height: 9%;
+
+}
 .stripe1 {
   /* background-image: url("https://i1.wp.com/ips-dc.org/wp-content/uploads/2019/09/immigration.jpg?resize=1080%2C675&ssl=1"); */
   background-position: center;
   background-size: 80% 100%;
   color: red;
+
 }
 
 .box_header_container {
