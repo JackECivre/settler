@@ -1,0 +1,17 @@
+body{
+    height: 100%;
+}
+
+.stripe {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+}
+
+h1{
+    text-align: center;
+}
