@@ -56,12 +56,27 @@
                     // The location of Uluru
                     var uluru = { lat: 32.0853, lng: 34.7818 };
                     var misrad = { lat: 32.073098, lng: 34.787601 };
+                    var police = { lat: 32.079256, lng: 34.790924 };
+                    var municipality = { lat: 32.079610, lng: 34.773390 };
+                    var hospital = { lat: 32.079618, lng: 34.787241 };
+                    var dizengoff = { lat: 32.075686, lng: 34.787601 };
+                    var police = { lat: 32.079256, lng: 34.790924 };
+                    var bus_station = { lat: 32.056420, lng: 34.779468 };
+                    var market = { lat: 32.068728, lng: 34.769122 };
                     // The map, centered at Uluru
                     var map = new google.maps.Map(
                         document.getElementById('map'), { zoom: 13, center: uluru });
                     // The marker, positioned at Uluru
                     var marker = new google.maps.Marker({ position: uluru, map: map });
                     var markerTwo = new google.maps.Marker({ position: misrad, map: map });
+                    var marker_police = new google.maps.Marker({ position: police, map: map });
+                    var municipality = new google.maps.Marker({ position: municipality, map: map });
+                    var hospital = new google.maps.Marker({ position: hospital, map: map });
+                    var dizengoff = new google.maps.Marker({ position: misrad, map: map });
+                    var marker_police = new google.maps.Marker({ position: police, map: map });
+                    var bus_station = new google.maps.Marker({ position: bus_station, map: map });
+                    var market = new google.maps.Marker({ position: market, map: map });
+
                 }
             </script>
             <!--Load the API from the specified URL
