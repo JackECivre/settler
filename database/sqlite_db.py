@@ -133,13 +133,3 @@ class DB:
         cur.execute(sql)
         rows = cur.fetchall()
         return rows
-
-
-if __name__ == "__main__":
-    DB_FILE = "./settler.db"
-    db = DB(DB_FILE)
-    rows = db.read_table("shared_activities")
-    host = defaultdict(list)
-    for r in rows:
-        host["first_name"].append(r[1])
-    x=1

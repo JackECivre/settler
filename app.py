@@ -148,11 +148,11 @@ def create_meal():
         # "last_name": request.form['last_name'],
         # "origin_country": request.form['country_of_origin'],
         "creator_id": 1,  # TODO: Warring: hard code -  should be connected user id
-        "event_date": request.form['meal_date'],
+        "meal_date": request.form['meal_date'],
         "meal_time": request.form['meal_time'],
         "event_city": request.form['city_of_residence'],
         "event_address": request.form['address'],
-        "max_people": request.form['number_of_guests'],
+        "guest_number": request.form['number_of_guests'],
         "meal_preference": ",".join(meal_tags()),
     }
 
@@ -160,7 +160,7 @@ def create_meal():
     meal_data = list(host.values())
     db.host_meal_to_db(meal_data)
 
-    return render_template("meal.html", host=host)
+    return render_template("listings.html", host=host)
 
 
 @app.route("/meal/listings", methods=['GET'])
