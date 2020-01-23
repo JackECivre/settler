@@ -1,5 +1,6 @@
 .container {
   justify-content: flex-start;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form-container {
@@ -7,11 +8,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .formItem {
   justify-content: space-evenly;
   margin-top: 2vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .formBox {
@@ -22,6 +25,7 @@
   align-items: center;
   margin-top: 15vh;
   padding-top: 0vh !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 input {
@@ -33,6 +37,7 @@ input {
   border-bottom-width: 4px;
   border-left-width: 0px;
   background: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .inputBox {
@@ -43,13 +48,14 @@ input {
   background: rgba(255, 255, 255, 0.25) !important ;
   -webkit-text-fill-color: black !important;
   font-weight: 600 !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .formTitles{
   margin: 0;
   padding-bottom: 0.25vh;
   color: white !important;
-  
+  font-family: 'Montserrat', sans-serif;
 }
 
 .submitButton {
@@ -59,4 +65,5 @@ input {
   border-radius: 15px;
   width: 50vw;
   background-color: white !important;
+  font-family: 'Montserrat', sans-serif;
 }

@@ -1,5 +1,6 @@
 body{
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .stripe {
@@ -11,9 +12,11 @@ body{
     align-items: center;
     border-radius: 30%;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1{
     text-align: center;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
