@@ -41,16 +41,15 @@ input {
   border-radius: 15px;
   border: none;
   background: rgba(255, 255, 255, 0.25) !important ;
-  color: white;
   -webkit-text-fill-color: black !important;
   font-weight: 600 !important;
 }
 
-h4 {
+.formTitles{
   margin: 0;
-  color: white;
   padding-bottom: 0.25vh;
-
+  color: white !important;
+  
 }
 
 .submitButton {
