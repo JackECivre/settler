@@ -34,31 +34,39 @@
         <div class="content">
 
             <table>
-                <tr class="header">
-                    <th class="first_name header">First Name</th>
-                    <th class="last_name header">Last Name</th>
-                    <th class="address header">Address</th>
-                    <th class="max_people header">Available Seats</th>
-                    <th class="meal_type header">Meal Type</th>
-                    <th class="food_restriction header">Food Restriction</th>
-                    <th class="meal_date header">Meal Date</th>
-                    <th class="meal_time header">Meal Time</th>
-                    <th class="join_btn header">Join</th>
-                </tr>
-                {% for meal in social_meals %}
                 <tr class="">
-                    <td class="first_name_data"> need to fix </td>
-                    <td class="last_name_data"> need to fix </td>
-                    <td class="event_address">{{meal.event_address}}</td>
-                    <td class="max_people">{{meal.max_people}}</td>
-                    <td class="meal_preference"> {{meal.meal_preference}} </td>
-                    <td class="food_restriction data"> need to fix </td>
-                    <td class="event_date">{{meal.meal_date}}</td>
-                    <td class="event_time">{{meal.meal_time}}</td>
+                    <th class="first_name">First Name</th>
+                    <th class="last_name">Last Name</th>
+                    <th class="address">Address</th>
+                    <th class="max_people">Available Seats</th>
+                    <th class="meal_type">Meal Type</th>
+                    <th class="food_restriction">Food Restriction</th>
+                    <th class="meal_date">Meal Date</th>
+                    <th class="meal_time">Meal Time</th>
+                    <th class="join_btn">Join</th>
+                </tr>
+                <tr class="">
+                    <td class="first_name_data">Eric </td>
+                    <td class="last_name_data"> Pinhasovich </td>
+                    <td class="event_address">59 Florentin st</td>
+                    <td class="max_people">6</td>
+                    <td class="meal_preference"> Meat, Indian </td>
+                    <td class="food_restriction data"> None </td>
+                    <td class="event_date">01/31/2020</td>
+                    <td class="event_time">09:00 PM</td>
                     <td class="join data"><button>Join</button></td>
                 </tr>
-                {% endfor %}
-
+                <tr class="">
+                    <td class="first_name_data">Yonotan </td>
+                    <td class="last_name_data"> Salmon </td>
+                    <td class="event_address">18 Shoken st</td>
+                    <td class="max_people">23</td>
+                    <td class="meal_preference"> Vegan </td>
+                    <td class="food_restriction data"> NO MEAT </td>
+                    <td class="event_date">02/29/2020</td>
+                    <td class="event_time">10:01 PM</td>
+                    <td class="join data"><button>Join</button></td>
+                </tr>
             </table>
         </div>
     </div>
