@@ -61,6 +61,21 @@ def map():
     return render_template("maps.html")
 
 
+@app.route("/about", methods=['GET'])
+def about():
+    return render_template("about.html")
+
+
+@app.route("/faq", methods=['GET'])
+def faq():
+    return render_template("faq.html")
+
+
+@app.route("/contacts", methods=['GET'])
+def contacts():
+    return render_template("contacts.html")
+
+
 @app.route("/quiz", methods=['GET'])
 def quiz():
     return render_template("quiz.html")
@@ -119,18 +134,18 @@ def create_meal():
         # problem with: first_name, last_name, date_of_birth, origin_country. need to get it from automatic from connected user.
         # problem with: meal_time, meal_type, current_city, address -> no in social_meals table.
         # big problem: meal preference: it is list. should be one string or create new table for types.
-        # "first_name": request.form['first_name'],
-        # "last_name": request.form['last_name'],
-        # "date_of_birth": request.form['bday'],
-        # "origin_country": request.form['country_of_origin'],
-        # "address": request.form['address'],
-        # "current_city": request.form['city_of_residence'],
+        "first_name": request.form['first_name'],
+        "last_name": request.form['last_name'],
+        "date_of_birth": request.form['bday'],
+        "origin_country": request.form['country_of_origin'],
+        "address": request.form['address'],
+        "current_city": request.form['city_of_residence'],
         "number_of_guests": request.form['number_of_guests'],
-        # "meal_preference": meal_tags(),
+        "meal_preference": meal_tags(),
         "event_date": request.form['meal_date'],
-        # "meal_time": request.form['meal_time']
-        "creator_id": 1,  # TODO: Warring: hard code -  should be connected user id
-        "meal_preference": "kosher"  # TODO: Warring: hard code - should be from the form.
+        "meal_time": request.form['meal_time']
+        # "creator_id": 1,  # TODO: Warring: hard code -  should be connected user id
+        # "meal_preference": "kosher"  # TODO: Warring: hard code - should be from the form.
     }
 
     db = DB(DB_FILE)
