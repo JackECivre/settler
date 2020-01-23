@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -34,6 +35,7 @@ h1 {
   align-items: center;
   padding: 1px;
   height:100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .content {
@@ -46,6 +48,7 @@ h1 {
   flex-direction: row;
   justify-items: space-evenly;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav-list {
@@ -53,6 +56,7 @@ h1 {
   display: flex;
   width: 60vw;
   justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .language_selector {

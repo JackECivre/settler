@@ -2,6 +2,7 @@
 .button_container {
   height: 60vh;
   width: 95vw;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .host_button button{
@@ -14,10 +15,12 @@
   padding: 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .button_name {
   font-size: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 

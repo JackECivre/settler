@@ -5,6 +5,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    font-family: 'Montserrat', sans-serif;
 }
 
 caption{
@@ -13,6 +14,7 @@ caption{
     margin: 0 1vw 0 1vw;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -21,25 +23,30 @@ table {
     background-color: rgba(000, 000, 000, 0.6);
     height: 300px;
     width: 300px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 tbody > tr {
     display: flex;
     justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
 .stripe2 {
     height: 200px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 td{
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Montserrat', sans-serif;
 
 
 }
 
 th{
     color: #ffe100;
+    font-family: 'Montserrat', sans-serif;
 }
