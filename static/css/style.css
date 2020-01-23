@@ -28,15 +28,15 @@ h1 {
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   flex-direction: column;
   align-items: center;
   padding: 1px;
- 
 }
 
-.content{
+.content {
   margin-top: 18vh;
 }
 
@@ -81,7 +81,7 @@ h1 {
   justify-content: start;
 }
 
-.logo_img2{
+.logo_img2 {
   display: flex;
   height: auto;
   width: 30vw;
@@ -110,12 +110,12 @@ footer {
   align-items: center;
 }
 
-.footer_text{
+.footer_text {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
 
-.footer_img{
+.footer_img {
   width: 20vw;
 }
 
@@ -143,11 +143,10 @@ footer {
 }
 .sign :hover {
   opacity: 1;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 
 .stripe {
   display: flex;
@@ -160,11 +159,9 @@ footer {
   border: 1px solid;
 }
 
-
-.fyrebox_quiz{
+.fyrebox_quiz {
   z-index: 100;
 }
-
 
 nav {
   display: flex;
@@ -189,7 +186,6 @@ nav {
   border-radius: 25px;
   margin-right: 1vw;
   align-self: center;
-
 }
 
 .topnav #myLinks {
@@ -222,4 +218,16 @@ nav {
   color: white;
 }
 
+#google_translate_element {
+  position: fixed;
+  right: 48%;
+  bottom: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1px;
+}
 
+.goog-te-gadget .goog-te-combo {
+  margin: 0 !important;
+  padding: 0px !important;
+  height: 20px !important;
+}

@@ -14,10 +14,6 @@
   margin-top: 2vh;
 }
 
-.form_item h3 {
-  margin: 0;
-}
-
 .formBox {
   width: 90vw;
   display: flex;
@@ -44,19 +40,19 @@ input {
   margin: 0 !important;
   border-radius: 15px;
   border: none;
-  background:rgba(255, 255, 255, 0.25) !important ;
-  color: white;
+  background: rgba(255, 255, 255, 0.25) !important ;
   -webkit-text-fill-color: black !important;
   font-weight: 600 !important;
 }
 
-h4 {
+.formTitles{
   margin: 0;
   padding-bottom: 0.25vh;
+  color: white !important;
+  
 }
 
-
-.submitButton{
+.submitButton {
   margin-top: 5vh !important;
   font-size: 2rem;
   font-weight: 900;
