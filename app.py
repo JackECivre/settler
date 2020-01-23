@@ -61,6 +61,11 @@ def map():
     return render_template("maps.html")
 
 
+@app.route("/translate", methods=['GET'])
+def translate():
+    return render_template("translate.html")
+
+
 @app.route("/about", methods=['GET'])
 def about():
     return render_template("about.html")
