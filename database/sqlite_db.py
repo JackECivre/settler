@@ -60,7 +60,7 @@ class DB:
         );
         
         CREATE TABLE IF NOT EXISTS `social_meals` (
-          `meal_id` int PRIMARY KEY,
+          `meal_id` INTEGER PRIMARY KEY AUTOINCREMENT,
           `creator_id` int,
           `event_date` datetime,
           `max_people` int,
@@ -97,13 +97,13 @@ class DB:
           `source_id` int
         );
         
-        CREATE TABLE `questions` (
+        CREATE TABLE IF NOT EXISTS `questions` (
           `question_id` int PRIMARY KEY,
           `category` varchar(255),
           `answer_type` varchar(255)
         );
         
-        CREATE TABLE `answer` (
+        CREATE TABLE  IF NOT EXISTS `answer` (
           `answer_id` int PRIMARY KEY,
           `user_id` int,
           `question_id` int,
@@ -122,31 +122,32 @@ class DB:
         sql = """INSERT INTO users 
         (username, first_name, last_name,  date_of_birth, address, current_city, origin_country) 
         VALUES (?, ?, ?, ?, ?, ?, ?) """
-        # data = ["avi326", "avi", "barazani", None, "add", "asd", "asd"]
         self.conn.execute(sql, data)
         self.conn.commit()
 
-    def read_listing(self):
+    def host_meal_to_db(self, data):
+        """ add meal to social_meals table in database """
+
+        sql = """INSERT INTO social_meals 
+        (creator_id, event_date, max_people,  date_of_birth, meal_preference) 
+        VALUES (?, ?, ?, ?) """
+        self.conn.execute(sql, data)
+        self.conn.commit()
+
+    def read_table(self, table_name, columns="*"):
         """ read_listing from the database """
         cur = self.conn.cursor()
-        sql = """SELECT * from users """
+        sql = f"SELECT {columns} from {table_name}"
         cur.execute(sql)
         rows = cur.fetchall()
         return rows
 
 
-    def read_listing(self):
-        """ read_listing from the database """
-        cur = self.conn.cursor()
-        sql = """SELECT * from users """
-        cur.execute(sql)
-        rows = cur.fetchall()
-        return rows
-
-# if __name__ == "__main__":
-    # DB_FILE = "./settler.db"
-    # db = DB(DB_FILE)
-    # rows = db.read_listing()
-    # host = defaultdict(list)
-    # for r in rows:
-    #     host["first_name"].append(r[1])
+if __name__ == "__main__":
+    DB_FILE = "./settler.db"
+    db = DB(DB_FILE)
+    rows = db.read_table("shared_activities")
+    host = defaultdict(list)
+    for r in rows:
+        host["first_name"].append(r[1])
+    x=1

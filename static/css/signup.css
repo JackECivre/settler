@@ -1,5 +1,5 @@
-.container{
-    justify-content: flex-start;
+.container {
+  justify-content: flex-start;
 }
 
 .form-container {
@@ -9,7 +9,7 @@
   justify-content: space-evenly;
 }
 
-.form_item {
+.formItem {
   justify-content: space-evenly;
   margin-top: 2vh;
 }
@@ -18,17 +18,49 @@
   margin: 0;
 }
 
-.form_box{
-    padding-top: 5vh;
+.formBox {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15vh;
+  padding-top: 0vh !important;
 }
 
 input {
   width: 50vw;
-  padding: 1px 0px;
-  border: solid lightgray;
+  padding: 10px 0px;
+  border: solid white;
   border-top-width: 0px;
   border-right-width: 0px;
   border-bottom-width: 4px;
   border-left-width: 0px;
   background: none;
+}
+
+.inputBox {
+  height: 2vh !important;
+  margin: 0 !important;
+  border-radius: 15px;
+  border: none;
+  background:rgba(255, 255, 255, 0.25) !important ;
+  color: white;
+  -webkit-text-fill-color: black !important;
+  font-weight: 600 !important;
+}
+
+h4 {
+  margin: 0;
+  padding-bottom: 0.25vh;
+}
+
+
+.submitButton{
+  margin-top: 5vh !important;
+  font-size: 2rem;
+  font-weight: 900;
+  border-radius: 15px;
+  width: 50vw;
+  background-color: white !important;
 }
