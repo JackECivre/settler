@@ -27,105 +27,96 @@ body {
   flex-direction: column;
 }
 
-
-
-.header{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.split_box{
-    display: flex;
-    justify-content: center;
-    justify-content:center; 
-   
+.split_box {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
 }
-.small-container{
-    border: 1px solid blue;
-    width: 500px;
-    height: 400px;
-    margin: 5px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.small-container {
+  width: 40vw;
+  height: 15vh;
+  margin: 0.5vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
+.container1 {
+  background-image: url("https://www.androidguys.com/wp-content/uploads/2017/12/Where-are-you.jpg");
+}
+.container2 {
+  background-image: url("https://www.groovehq.com/blog/wp-content/uploads/2019/10/Feature-image-Lowering-prices@2x-790x490.png");
+}
+.container3 {
+  background-image: url("https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BZEMCNHX3UZQXPOKUSHJS22HKU.JPG&w=767");
+}
+.container4 {
+  background-image: url("https://i2.wp.com/www.mobileworldlive.com/wp-content/uploads/2019/05/social-media-apps-2-shutterstock-650-e1576686057538.jpg?fit=650%2C399&ssl=1");
+}
+.container5 {
+  background-image: url("https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg?size=626&ext=jpg");
+}
+.container6 {
+  background-image: url("http://www.aljanh.net/data/archive/img/2404489385.png");
+}
+.container7 {
+  background-image: url("https://www-file.huawei.com/-/media/corporate/images/magazine/winwin/se5/07-03.jpg");
+}
 
-.container1{
-    background-image: url("https://www.androidguys.com/wp-content/uploads/2017/12/Where-are-you.jpg");  
+.container8 {
+  background-image: url("https://img.pngio.com/benefits-of-after-school-activities-for-children-kids-doing-an-art-activity-png-300_300.png");
 }
-.container2{
-    background-image: url("https://www.groovehq.com/blog/wp-content/uploads/2019/10/Feature-image-Lowering-prices@2x-790x490.png");
-    
+
+.stripe {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-position-x: 20px;
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
 }
-.container3{
-    background-image: url("https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BZEMCNHX3UZQXPOKUSHJS22HKU.JPG&w=767");
-    
+
+.stripe1 {
+  /* background-image: url("https://i1.wp.com/ips-dc.org/wp-content/uploads/2019/09/immigration.jpg?resize=1080%2C675&ssl=1"); */
+  background-position: center;
+  background-size: 80% 100%;
+  color: red;
 }
-.container4{
-    background-image: url("https://i2.wp.com/www.mobileworldlive.com/wp-content/uploads/2019/05/social-media-apps-2-shutterstock-650-e1576686057538.jpg?fit=650%2C399&ssl=1");
-    
+
+.box_header_container {
+  height: 5vh;
+  width: 30vw;
+  background-color: rgba(135, 206, 250, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  /* border: 2px solid black; */
 }
-.container5{
-    background-image: url("https://img.freepik.com/free-vector/quiz-neon-sign_1262-19629.jpg?size=626&ext=jpg");
-    background-size: 500px 400px;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.boxHeader {
+  display: flex;
+  text-align: center;
+  color: black;
+  letter-spacing: normal;
   
-  
- 
-}
-.container6{
-    background-image: url("http://www.aljanh.net/data/archive/img/2404489385.png");
-    background-size: contain; 
-    background-repeat:no-repeat;
-
-}
-.container7{
-    background-image: url("https://www-file.huawei.com/-/media/corporate/images/magazine/winwin/se5/07-03.jpg");
-    
 }
 
-.container8{
-    background-image: url("https://img.pngio.com/benefits-of-after-school-activities-for-children-kids-doing-an-art-activity-png-300_300.png");
-    
+h5 {
+  color: black !important;
+  margin: 0 !important;
+  font-weight: 500;
+  font-size: medium !important;
 }
-
-.stripe{
-    
-    height: 300px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-position-x: 20px ;
-    background-size: 300px 300px;
-    background-repeat: no-repeat;
-}
-
-.stripe1{
-    background-image: url("https://i1.wp.com/ips-dc.org/wp-content/uploads/2019/09/immigration.jpg?resize=1080%2C675&ssl=1");
-    background-position: center;
-    background-size: 80% 100%;
-    color: red;
-
-}
-
-.box_header_container{
-    height:50px;
-    width: 300px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid blue;
-}
-
-.box_header{
-    text-align: center;
-    color: black;
-}
-

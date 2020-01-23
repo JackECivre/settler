@@ -5,39 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/navbar.js"></script>
     <link rel="stylesheet" href="../static/css/style.css">
     <title>Settler - Listings</title>
 </head>
 
 <body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img class="logo_img2" src="../static/images/logo.png    " alt="settler logo">
+            </div>
+            <div class="topnav">
+                <a href="#home" class="active">Menu</a>
+                <div id="myLinks">
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
 
-    <table>
-        <tr class="header">
-            <th class="id header">ID</th>
-            <th class="first_name header">First Name</th>
-            <th class="last_name header">Last Name</th>
-            <th class="address header">Address</th>
-            <th class="guest_number header">Available Seats</th>
-            <th class="meal_type header">Meal Type</th>
-            <th class="food_restriction header">Food Restriction</th>
-            <th class="meal_date header">Meal Date</th>
-            <th class="meal_time header">Meal Time</th>
-            <th class="join_btn header">Join</th>
-        </tr>
-        <tr class="">
-            <td class="id">{{host.id}}</td>
-            <td class="first_name_data">{{host.first_name}}</td>
-            <td class="last_name_data">{{host.last_name}}</td>
-            <td class="adress data">{{host.address}}</td>
-            <td class="guest_number data">{{host.guest_number}}</td>
-            <td class="meal_type data">{{host.meal_type}}</td>
-            <td class="food_restriction data">{{host.food_restriction}}</td>
-            <td class="meal_date data">{{host.meal_date}}</td>
-            <td class="meal_time data">{{host.meal_time}}</td>
-            <td class="join data"><button>Join</button></td>
+        </nav>
+        <div class="content">
 
+            <table>
+                <tr class="header">
+                    <th class="id header">ID</th>
+                    <th class="first_name header">First Name</th>
+                    <th class="last_name header">Last Name</th>
+                    <th class="address header">Address</th>
+                    <th class="guest_number header">Available Seats</th>
+                    <th class="meal_type header">Meal Type</th>
+                    <th class="food_restriction header">Food Restriction</th>
+                    <th class="meal_date header">Meal Date</th>
+                    <th class="meal_time header">Meal Time</th>
+                    <th class="join_btn header">Join</th>
+                </tr>
+                <tr class="">
+                    <td class="id">{{host.id}}</td>
+                    <td class="first_name_data">{{host.first_name}}</td>
+                    <td class="last_name_data">{{host.last_name}}</td>
+                    <td class="adress data">{{host.address}}</td>
+                    <td class="guest_number data">{{host.guest_number}}</td>
+                    <td class="meal_type data">{{host.meal_type}}</td>
+                    <td class="food_restriction data">{{host.food_restriction}}</td>
+                    <td class="meal_date data">{{host.meal_date}}</td>
+                    <td class="meal_time data">{{host.meal_time}}</td>
+                    <td class="join data"><button>Join</button></td>
+                </tr>
 
-    </table>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>

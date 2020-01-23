@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Settler - Presentation/css/main.css">
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/signup.css">
     <title>Settler - SignUp</title>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
+
 <body>
     <div class="container">
-        <div class="header">
-            <nav class="nav-header">
-                <div class="logo">
-                    <img class="logo_img" src="../static/images/Setteler Logo.png" alt="settler logo">
-                </div>
-            </nav>
+
+        <div class="logo">
+            <img class="logo_img2" src="../static/images/logo.png    " alt="settler logo">
         </div>
 
         <div class="form-container">
             <form action="{{url_for('create_user')}}" method="post">
 
-                <div class="form_box">
-                    <div class="form_item">
-                        <h3>Username:</h3>
-                        <input type="text" name="username" />
+                <div class="formBox">
+                    <div class="formItem">
+                        <h4>Username:</h4>
+                        <input class="inputBox" type="text" name="username" />
                     </div>
-                    <div class="form_item">
-                        <h3>First Name:</h3>
-                        <input type="text" name="first_name" />
+                    <div class="formItem">
+                        <h4>First Name:</h4>
+                        <input class="inputBox" type="text" name="first_name" />
                     </div>
-                    <div class="form_item">
-                        <h3>Last Name:</h3>
-                        <input type="text" name="last_name" />
+                    <div class="formItem">
+                        <h4>Last Name:</h4>
+                        <input class="inputBox" type="text" name="last_name" />
                     </div>
-                    <div class="form_item">
-                        <h3>Date of Birth</h3>
-                        <input type="date" name="bday">
+                    <div class="formItem">
+                        <h4>Date of Birth</h4>
+                        <input class="inputBox" type="text" name="bday">
                     </div>
+                    <div class="formItem">
+                        <h4>Country of Origin:</h4>
+                        <input class="inputBox" type="text" name="country_of_origin" /></br>
+                    </div>
+                    <div class="formItem">
+                        <h4>City of Residence:</h4>
+                        <input class="inputBox" type="text" name="city_of_residence" />
+                    </div>
+                    <div class="formItem">
+                        <h4>Address:</h4>
+                        <input class="inputBox" type="text" name="address" />
+                    </div>
+                    <input class="submitButton" type="submit">
                 </div>
-
-                <hr>
-
-                <div class="form_box">
-                    <div class="form_item">
-                        <h3>Country of Origin:</h3>
-                        <input type="text" name="country_of_origin" /></br>
-                    </div>
-                    <div class="form_item">
-                        <h3>City of Residence:</h3>
-                        <input type="text" name="city_of_residence" />
-                    </div>
-                    <div class="form_item">
-                        <h3>Address:</h3>
-                        <input type="text" name="address" />
-                    </div>
-                </div>
-            <input type="submit"><input>
             </form>
         </div>
     </div>
