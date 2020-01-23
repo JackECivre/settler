@@ -61,6 +61,16 @@ def map():
     return render_template("maps.html")
 
 
+@app.route("/government", methods=['GET'])
+def government():
+    return render_template("government_information.html")
+
+
+@app.route("/transportation", methods=['GET'])
+def transportation():
+    return render_template("transportation_infromation.html")
+
+
 @app.route("/about", methods=['GET'])
 def about():
     return render_template("about.html")
