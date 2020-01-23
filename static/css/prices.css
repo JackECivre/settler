@@ -1,17 +1,45 @@
 .stripe{
     margin: 0;
     padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 caption{
-    background-color: rgba(255, 255, 255, 0.25);
     font-size: 2rem;
     font-weight: 900;
     margin: 0 1vw 0 1vw;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
-table{
+table {
     margin: 0 1vw 0 1vw;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(000, 000, 000, 0.6);
+    height: 300px;
+    width: 300px;
+}
 
+tbody > tr {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.stripe2 {
+    height: 200px;
+}
+
+td{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
+}
+
+th{
+    color: #ffe100;
 }
