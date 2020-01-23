@@ -24,6 +24,9 @@ users = [{
 }]
 
 
+
+
+
 @app.route("/")
 def hello():
     return render_template("index.html")
@@ -103,7 +106,7 @@ def host():
     return render_template("host.html")
 
 
-@app.route("/meal/host", methods=['POST'])
+@app.route("/added", methods=['POST'])
 def create_meal():
     def meal_tags():
         meal_type = []
@@ -112,18 +115,29 @@ def create_meal():
                 meal_type.append(val)
         return meal_type
     listing = {
-        "first_name": request.form['first_name'],
-        "last_name": request.form['last_name'],
-        "date_of_birth": request.form['bday'],
-        "origin_country": request.form['country_of_origin'],
-        "address": request.form['address'],
-        "current_city": request.form['city_of_residence'],
+        # TODO: Match the data from HTML to the table in DB.
+        # problem with: first_name, last_name, date_of_birth, origin_country. need to get it from automatic from connected user.
+        # problem with: meal_time, meal_type, current_city, address -> no in social_meals table.
+        # big problem: meal preference: it is list. should be one string or create new table for types.
+        # "first_name": request.form['first_name'],
+        # "last_name": request.form['last_name'],
+        # "date_of_birth": request.form['bday'],
+        # "origin_country": request.form['country_of_origin'],
+        # "address": request.form['address'],
+        # "current_city": request.form['city_of_residence'],
         "number_of_guests": request.form['number_of_guests'],
-        "meal type": meal_tags(),
-        "meal_date": request.form['meal_date'],
-        "meal_time": request.form['meal_time']
+        # "meal_preference": meal_tags(),
+        "event_date": request.form['meal_date'],
+        # "meal_time": request.form['meal_time']
+        "creator_id": 1,  # TODO: Warring: hard code -  should be connected user id
+        "meal_preference": "kosher"  # TODO: Warring: hard code - should be from the form.
     }
-    return render_template("listings.html", listing=listing)
+
+    db = DB(DB_FILE)
+    meal_data = list(listing.values())
+    db.host_meal_to_db(meal_data)
+
+    return render_template("meal.html", listing=listing)
 
 
 @app.route("/meal/listings", methods=['GET'])
