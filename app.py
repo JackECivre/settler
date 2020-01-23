@@ -139,30 +139,28 @@ def create_meal():
             if key.startswith('type'):
                 meal_type.append(val)
         return meal_type
-    listing = {
+    host = {
         # TODO: Match the data from HTML to the table in DB.
         # problem with: first_name, last_name, date_of_birth, origin_country. need to get it from automatic from connected user.
         # problem with: meal_time, meal_type, current_city, address -> no in social_meals table.
         # big problem: meal preference: it is list. should be one string or create new table for types.
-        "first_name": request.form['first_name'],
-        "last_name": request.form['last_name'],
-        "date_of_birth": request.form['bday'],
-        "origin_country": request.form['country_of_origin'],
-        "address": request.form['address'],
-        "current_city": request.form['city_of_residence'],
-        "max_people": request.form['number_of_guests'],
-        "meal_preference": meal_tags(),
-        "event_date": request.form['meal_date'],
-        "meal_time": request.form['meal_time']
-        # "creator_id": 1,  # TODO: Warring: hard code -  should be connected user id
-        # "meal_preference": "kosher"  # TODO: Warring: hard code - should be from the form.
+        # "first_name": request.form['first_name'],
+        # "last_name": request.form['last_name'],
+        # "origin_country": request.form['country_of_origin'],
+        "creator_id": 1,  # TODO: Warring: hard code -  should be connected user id
+        "meal_date": request.form['meal_date'],
+        "meal_time": request.form['meal_time'],
+        "event_city": request.form['city_of_residence'],
+        "event_address": request.form['address'],
+        "guest_number": request.form['number_of_guests'],
+        "meal_preference": ",".join(meal_tags()),
     }
 
     db = DB(DB_FILE)
-    meal_data = list(listing.values())
+    meal_data = list(host.values())
     db.host_meal_to_db(meal_data)
 
-    return render_template("listings.html", listing=listing)
+    return render_template("listings.html", host=host)
 
 
 @app.route("/meal/listings", methods=['GET'])
