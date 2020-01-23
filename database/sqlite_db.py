@@ -129,7 +129,14 @@ class DB:
     def read_table(self, table_name, columns="*"):
         """ read_listing from the database """
         cur = self.conn.cursor()
-        sql = f"SELECT {columns} from {table_name}"
-        cur.execute(sql)
-        rows = cur.fetchall()
-        return rows
+        query = cur.execute(f"SELECT {columns} from {table_name}")
+        colname = [d[0] for d in query.description]
+        result_list = [dict(zip(colname, r)) for r in query.fetchall()]
+        return result_list
+
+
+if __name__ == "__main__":
+    DB_FILE = "./settler.db"
+    db = DB(DB_FILE)
+    table_dict = db.read_table("users")
+    x=1

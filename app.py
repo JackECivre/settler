@@ -155,12 +155,12 @@ def create_meal():
         "guest_number": request.form['number_of_guests'],
         "meal_preference": ",".join(meal_tags()),
     }
-
     db = DB(DB_FILE)
     meal_data = list(host.values())
     db.host_meal_to_db(meal_data)
+    social_meals = db.read_table("social_meals")
 
-    return render_template("listings.html", host=host)
+    return render_template("listings.html", social_meals=social_meals)
 
 
 @app.route("/meal/listings", methods=['GET'])

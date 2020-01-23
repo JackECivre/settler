@@ -17,3 +17,21 @@
   height: 50px;
   width: 50px;
 }
+
+.app_row {
+  display: flex;
+  margin: 6px;
+  justify-content: space-evenly;
+}
+
+.app_container{
+  width: 50vw;
+}
+
+a > img {
+  height: 160px;
+  width: 160px;
+  border: 1px solid black;
+  margin: 8px;
+
+}
